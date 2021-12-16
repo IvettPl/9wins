@@ -1,0 +1,65 @@
+include vars-main-content
+
+
+
+//slider banner
+include ./../../modules/banner-slider/banner-slider
+
+//slider Sports
+.slider-mod.slider-mod--home.js-animate
+    .center
+        .slider-mod__title
+            .slider-mod__title-box
+                img(src="./img/svg/icn-sport.svg", alt="Virtual games")
+                h2 Sports
+            a.cat-all__link(href="##") See all
+
+        .swiper.cat-slider
+            .swiper-wrapper
+                +catSlider(sportSlider)
+
+//slider Virtual games
+.slider-mod.slider-mod--home.js-animate
+    .center
+        .slider-mod__title
+            .slider-mod__title-box
+                img(src="./img/svg/icn-games.svg", alt="Virtual games")
+                h2 Virtual games
+            a.cat-all__link(href="##") See all
+
+        .swiper.cat-slider
+            .swiper-wrapper
+                +catSlider(sportSlider)
+
+//slider Live casino
+.slider-mod.slider-mod--home.js-animate
+    .center
+        .slider-mod__title
+            .slider-mod__title-box
+                img(src="./img/svg/icn-casino.svg", alt="Live casino")
+                h2 Live casino
+            a.cat-all__link(href="##") See all
+
+        .swiper.cat-slider
+            .swiper-wrapper
+                +catSlider(sportSlider)
+
+//slider Slots
+.slider-mod.slider-mod--home.js-animate
+    .center
+        .slider-mod__title
+            .slider-mod__title-box
+                img(src="./img/svg/icn-slots.svg", alt="Slots")
+                h2 Slots
+            a.cat-all__link(href="##") See all
+
+        .swiper.cat-slider
+            .swiper-wrapper
+                +catSlider(sportSlider)
+
+
+//slider Bonuses
+include ./../../modules/slider-bonuses/slider-bonuses
+
+//block icns-panel
+include ./../../modules/icns-panel/icns-panel

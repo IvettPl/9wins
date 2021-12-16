@@ -1,0 +1,34 @@
+.charitem__banner
+    width 100%
+    line-height 34px
+    font-size 29px
+    color $white
+    font-weight 700
+    font-style italic
+    text-transform uppercase
+    text-shadow 1px 2px 0 $black
+
+    span
+        display block
+
+    &-title
+        margin -13px 0 0 -10px
+        line-height 101px
+        font-size 86px
+        color $yellow
+        letter-spacing -1px
+        text-shadow 0 4px 32px rgba($dark, .75)
+
+    &-desc
+    &-title
+        opacity 0
+        transform translateY(-50%)
+        transition opacity 650ms 2800ms, transform 650ms 2800ms
+
+
+.animation
+    .charitem__banner
+        &-desc
+        &-title
+            opacity 1
+            transform translateY(0)

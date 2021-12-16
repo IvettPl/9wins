@@ -1,0 +1,15 @@
+.login-form
+    .login-form__line.login-form__line--phone
+        .login-form__line-box
+            label(for="mail") Code
+            +inputText(loginPhoneInput)
+        .login-form__line-box
+            label(for="mail") Phone number
+            +inputText(loginPhoneInput)
+
+    .login-form__line.login-form__line--code
+        .login-form__line-box
+            label(for="mail") Code
+            +inputText(loginCodeInput)
+        .btn__wrap
+            +button(btnGetCode)

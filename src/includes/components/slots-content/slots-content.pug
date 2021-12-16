@@ -1,0 +1,12 @@
+include var-slots-content
+
+
+.sort
+    .center
+        .page-panel
+            .sort__header-list
+                .sort__header-item(data-f="all") All
+                .sort__header-item(data-f="f-favorite") Favorite
+                .sort__header-item(data-f="f-popular") Popular
+        .sort__content
+            +catSlider(sortSlots)

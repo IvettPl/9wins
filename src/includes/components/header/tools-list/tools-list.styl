@@ -1,0 +1,53 @@
+.tools-list
+    display inline-flex
+    align-items center
+
+    @media(max-width 1024px)
+        width 100%
+        height 83px
+        justify-content center
+        position fixed
+        left 0
+        bottom 0
+        background-color $black
+
+    &__item
+        margin-left 24px
+
+        @media(max-width 1200px)
+            margin-left 14px
+
+
+        &:first-child
+            margin-left 0
+
+    &__link
+        display flex
+        align-items center
+
+        @media(max-width 1024px)
+            width 62px
+            flex-direction column
+
+        &:hover
+            .tools-list__title
+                color $white
+
+    &__icn
+        margin-right 4px
+        width 24px
+        height 24px
+        display block
+        flex-shrink 0
+
+        @media(max-width 1024px)
+            margin-right 0
+
+    &__title
+        line-height 16px
+        font-size 14px
+        color $gray-superlight
+        transition color 250ms
+
+        @media(max-width 1024px)
+            text-align center

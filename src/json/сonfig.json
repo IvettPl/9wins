@@ -1,0 +1,32 @@
+{
+    "global": {
+        "lang": "en",
+        "title": "WINZ",
+        "styles": [
+            "./css/swiper-bundle.min.css",
+            "./css/main.min.css"
+        ],
+        "scripts": [
+            "./js/swiper-bundle.min.js",
+            "./js/main.min.js"
+        ],
+        "fonts": [
+            "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,700&display=swap"
+        ]
+    },
+    "main": {
+        "title": "Home",
+        "description": "Home page",
+        "menuIndex": 0
+    },
+    "bonus": {
+        "title": "My bonuses",
+        "description": "My bonuses page",
+        "menuIndex": 0
+    },
+    "slots": {
+        "title": "Slots",
+        "description": "Slots page",
+        "menuIndex": 0
+    }
+}

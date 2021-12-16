@@ -1,0 +1,9 @@
+include vars-banner-slider
+
+.swiper.banner-slider
+    .swiper-wrapper
+        each item in bannerSlider
+            .swiper-slide.banner-slider__item
+                picture
+                    source(srcset= item.webp, type="image/webp")
+                    img(src= item.src, srcset= item.src2x, alt= item.srcAlt)

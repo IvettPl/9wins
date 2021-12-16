@@ -1,0 +1,13 @@
+include var-login-form
+
+.login-form
+    .login-form__line
+        label(for="mail") Email
+        +inputText(loginMailInput)
+    .login-form__line
+        label(for="password") Password
+        +inputText(loginPassInput)
+    .login-form__line.login-form__line--checkbox
+        +checkbox(loginFogotInput)
+        label.label.label__checkbox(for="fogot") Fogot your password?
+            a(href="##") Get recovery link.

@@ -1,0 +1,55 @@
+.login
+    display inline-flex
+
+    &__box
+        &-default
+        &-loged
+            display inline-flex
+            align-items center
+
+        &-loged
+            display none
+
+        &-default
+            .btn
+                width 122px
+
+    &__btn
+        margin-right 8px
+        padding 0
+        width 76px
+        height 32px
+        display block
+        line-height 16px
+        font-size 14px
+        color $blue
+        border 0
+        background none
+        cursor pointer
+        transition color 250ms
+
+        &:hover
+            color $blue-light
+
+    .avatar
+        margin-right 37px
+        width 32px
+        height 32px
+        flex-shrink 0
+        position relative
+        border 2px solid $red
+        border-radius 50%
+        box-sizing border-box
+        overflow hidden
+        cursor pointer
+        box-sizing border-box
+
+        @media(max-width 1024px)
+            margin-right 0
+
+.wrapper--reg
+    .login__box-default
+        display none
+
+    .login__box-loged
+        display inline-flex

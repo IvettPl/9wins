@@ -1,0 +1,29 @@
+include var-bonus-content
+
+
+.bonus__title My Bonuses
+
+//slider Bonuses
+include ./../../modules/slider-bonuses/slider-bonus
+
+//- .slider-mod.slider-mod--active.js-animate
+//-     .center
+//-         .slider-mod__title
+//-             h3 Active
+//-         .swiper.slider-mod__list
+//-             .swiper-wrapper
+//-                 +bonusList(bonusItemActive)
+
+//- .slider-mod.slider-mod--available.js-animate
+//-     .center
+//-         .slider-mod__title
+//-             h3 Available
+//-         .swiper.slider-mod__list
+//-             .swiper-wrapper
+//-                 +bonusList(bonusItemAvailable)
+
+.slider-mod--nobonuses
+    .center
+        +bonusList(noBonusItemActive)
+
+include ./../../modules/icns-panel/icns-panel

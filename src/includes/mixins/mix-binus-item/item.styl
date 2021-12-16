@@ -1,0 +1,118 @@
+.item
+    width 352px
+    height 447px
+    position relative
+    perspective 1000px
+
+    @media(max-width 767px)
+        width 332px
+
+    &--rotate
+        .item
+            &__front
+                transform rotateY(180deg)
+
+            &__back
+                transform rotateY(360deg)
+
+    &__front
+    &__back
+        width 100%
+        height 100%
+        position absolute
+        bottom 0
+        left 0
+        background-color $gray
+        backface-visibility hidden
+        border-radius 16px
+        transition 600ms
+        box-sizing border-box
+
+    &__front
+        display flex
+        align-items flex-end
+
+    &__back
+        padding 40px 40px 23px
+        display flex
+        color $white
+        flex-direction column
+        justify-content center
+        transform rotateY(180deg)
+
+        p
+            margin auto
+
+
+    &__bg
+        width 100%
+
+    &__info
+        padding 38px 16px 0
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        bottom 0
+        box-sizing border-box
+
+        &-cancel
+            width 32px
+            height 32px
+            position absolute
+            top 0
+            right 0
+            border 0
+            background url(../img/svg/btn-cancel.svg) no-repeat center
+            background-size cover
+            cursor pointer
+            transition opacity 250ms
+
+            &:hover
+                opacity .5
+
+    &__title
+        line-height 34px
+        font-size 29px
+        color $white
+        font-weight 700
+        font-style italic
+        text-transform uppercase
+        text-shadow 1px 2px 0 $black
+
+        span
+            display block
+
+        &-percent
+            margin -13px 0 0 -10px
+            line-height 101px
+            font-size 86px
+            color $yellow
+            letter-spacing -1px
+            text-shadow 0 4px 32px rgba($dark, .75)
+
+    .btn
+        padding 0 52px
+        height 48px
+        display inline-flex
+        line-height 21px
+        font-size 18px
+
+        &__wrap
+            justify-content center
+
+.slider-mod
+    &--active
+    &--bonuses
+        .cancel-bonus
+            .btn
+                padding 0 43px
+                height 44px
+                box-shadow 0 2px 8px 0 rgba($dark, .5)
+
+                &__wrap
+                    margin-top 26px
+                    justify-content space-between
+
+                &--grey
+                    padding 0 16px

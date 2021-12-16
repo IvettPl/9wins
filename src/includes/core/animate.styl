@@ -1,0 +1,92 @@
+.slider-mod
+    &--active
+    &--available
+        .slider-mod__title
+            transform translateX(-100%)
+            transition transform 650ms
+
+    .item
+
+        &__front
+            background-color rgba($gray, 0)
+            transition background-color 650ms 600ms, transform 650ms
+
+        &__bottom
+            background-color rgba($black, 0)
+            transition background-color 650ms 600ms
+
+            &-animbox
+                opacity 0
+                transform translateY(120%)
+                transition opacity 650ms 1200ms, transform 650ms 1200ms
+
+    &--home
+    &--bonuses
+        .slider-mod__title
+            opacity 0
+            transform translateY(100%)
+
+    &--home
+        .slider-mod__title
+            transition opacity 450ms 650ms, transform 450ms 650ms
+
+        .cat-slider
+            opacity 0
+            transform translateX(120%)
+            transition transform 650ms, opacity 650ms
+
+    &--bonuses
+        .slider-mod__title
+            transition opacity 450ms 1500ms, transform 450ms 1500ms
+
+    &.animation
+        .slider-mod__title
+            opacity 1
+            transform translateY(0)
+
+        .cat-slider
+            opacity 1
+            transform translateX(0)
+
+        .item
+            &__front
+                background-color rgba($gray, 1)
+
+            &__bottom
+                background-color rgba($black, .75)
+
+                &-animbox
+                    opacity 1
+                    transform translateY(0)
+
+            &__bg
+                opacity 1
+
+            &__info
+                &-cancel
+                    opacity 1
+
+.sort
+    .cat-slider__item
+        &.js-hide
+            opacity 1
+            animation-name a1
+            animation-duration 700ms
+            animation-fill-mode forwards
+
+@keyframes a1
+    to
+        margin 0
+        width 0
+        height 0
+        opacity 0
+
+
+.hidden-box
+    transform translateY(100%)
+    transition transform 300ms
+
+.cat-slider__item
+    &:hover
+        .hidden-box
+            transform translateY(0)

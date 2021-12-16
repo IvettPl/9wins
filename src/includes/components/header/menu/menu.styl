@@ -1,0 +1,150 @@
+.header-nav
+    max-width 375px
+    padding 56px 16px 110px
+    width 100%
+    height 100%
+    position fixed
+    top 0
+    left 0
+    z-index 3
+    background-color $black
+    box-sizing border-box
+    transform translateX(-100%)
+    transition transform 250ms
+
+    &.show
+        transform translateX(0)
+
+    &__close
+        width 24px
+        height 24px
+        position absolute
+        top 9px
+        right 16px
+        border 0
+        background url(../img/svg/btn-close.svg) no-repeat center
+        background-size cover
+        cursor pointer
+        transition opacity 250ms
+
+        &:hover
+            opacity .5
+
+    &__tabs
+        width 100%
+        height 100%
+        overflow-x hidden
+        overflow-y auto
+
+        &-content
+            width 100%
+            display flex
+            transform translate(0)
+            transition transform 250ms ease
+
+            &.shift
+                transform translate(-100%)
+
+        &-head
+            width calc(100% - 32px)
+            height 44px
+            display flex
+            position absolute
+            left 16px
+            bottom 48px
+            opacity 0
+            visibility hidden
+            background-color $dark
+            border-radius 22px
+
+            @media(min-height 720px)
+                bottom 30px
+
+            &:before
+                content ''
+                width 50%
+                height 100%
+                position absolute
+                top 0
+                left 0
+                border-radius 22px
+                background-color $gray
+                transform translate(0)
+                transition transform 250ms ease
+
+            &.shift
+                &:before
+                    transform translate(100%)
+
+
+            &-item
+                width 50%
+                display block
+                line-height 44px
+                font-size 13px
+                color $gray-superlight
+                text-align center
+                letter-spacing -.08px
+                position relative
+
+    &__list
+        width 100%
+        flex-shrink 0
+
+        &:last-child
+            display none
+
+    &__list
+        width 100%
+
+    &__item
+        margin-top 12px
+        width 100%
+
+        &:first-child
+            margin-top 0
+
+    &__link
+        padding 13px 23px 13px 0
+        display flex
+        line-height 22px
+        font-size 17px
+        color $white
+        align-items center
+
+    &__icn
+        margin-right 8px
+        width 24px
+        height 24px
+        display block
+        flex-shrink 0
+
+.overlay
+    width 100%
+    height 100%
+    position fixed
+    top 0
+    left 0
+    z-index 2
+    opacity 0
+    visibility hidden
+    background-color rgba($dark, .8)
+    transition opacity 250ms, visibility 250ms
+    cursor pointer
+
+    &.show
+        opacity 1
+        visibility visible
+
+
+
+.wrapper--reg
+    .header-nav
+        &__list
+            &:last-child
+                display block
+
+        &__tabs
+            &-head
+                opacity 1
+                visibility visible

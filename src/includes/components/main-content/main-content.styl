@@ -1,0 +1,58 @@
+.slider-mod
+    &--home
+    &--bonuses
+        .slider-mod
+            &__title
+                display flex
+                align-items center
+                justify-content space-between
+
+                @media(max-width 1024px)
+                    margin-bottom 5px
+
+                h2
+                    line-height 138px
+                    font-size 118px
+                    font-weight 900
+
+                    @media(max-width 1024px)
+                        line-height 24px
+                        font-size 20px
+                        font-weight 400
+                        color $orange-light
+
+                &-box
+                    display flex
+                    align-items center
+
+                    img
+                        margin-right 4px
+                        width 24px
+                        height 24px
+                        display none
+
+                        @media(max-width 1024px)
+                            display block
+
+    &__list
+        &--home
+            margin-top -70px
+
+            @media(max-width 1024px)
+                margin-top -28px
+
+
+    &--home
+        .cat-all__link
+            margin 25px 45px 0 0
+            display block
+            line-height 18px
+            font-size 15px
+            color $blue
+            transition color 250ms
+
+            @media(max-width 1024px)
+                margin 0 16px 0 0
+
+            &:hover
+                color $blue-light

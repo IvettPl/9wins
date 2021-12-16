@@ -1,0 +1,10 @@
+include vars-menu
+
+
+.footer__top
+    .center
+        nav.footer__nav
+            ul.footer__list
+                each item in menuFooter
+                    li.footer__list-item
+                        a.footer__list-link(href= item.link)= item.title

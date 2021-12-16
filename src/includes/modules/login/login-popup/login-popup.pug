@@ -1,0 +1,26 @@
+include vars-login-popup
+
+
+#login.login-popup
+    button.header-nav__close
+    .login-popup__column
+        +charItem(charItemLoginForm)
+    .login-popup__column
+        .login-popup__dialog
+            form(action="" method="POST" name="login")
+                .login-popup__title Log in
+                .header-nav__tabs
+                    .header-nav__tabs-head
+                        a.header-nav__tabs-head-item.active(href="##", data-tab="1") Use email
+                        a.header-nav__tabs-head-item(href="##", data-tab="2") Use phone number
+                    .header-nav__tabs-content
+                        .header-nav__list.active(data-tab-content="1")
+                            include ./../login-form/login-form
+                        .header-nav__list.active(data-tab-content="2")
+                            include ./../login-form/login-phone
+                .btn__wrap
+                    +button(login)
+                include ./../login__social/login__social
+        .login-popup__footer
+            p Don’t have an account?
+                a(href="##") Sign Up

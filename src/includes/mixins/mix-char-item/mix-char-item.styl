@@ -1,0 +1,115 @@
+.charitem
+    width 100%
+    max-width 352px
+    height 447px
+    position relative
+    perspective 1000px
+
+    @media(max-width 767px)
+        max-width 332px
+
+    &--rotate
+        .charitem
+            &__front
+                transform rotateY(180deg)
+
+            &__back
+                transform rotateY(360deg)
+
+    &__front
+    &__back
+        width 100%
+        height 100%
+        position absolute
+        bottom 0
+        left 0
+        backface-visibility hidden
+        border-radius 16px
+        transition 600ms
+        box-sizing border-box
+
+    &__front
+        display flex
+        align-items flex-end
+
+    &__bg
+        width 100%
+        height 480px
+        opacity 0
+        transition opacity 650ms 600ms
+
+    &__info
+        padding 38px 16px 0
+        width 100%
+        height 100%
+        position absolute
+        left 0
+        bottom -1px
+        box-sizing border-box
+
+    &__place
+        width 118px
+        height 40px
+        line-height 40px
+        color $yellow
+        font-weight 700
+        text-align center
+        letter-spacing -0.408px
+        position absolute
+        top 160px
+        left 50%
+        z-index 1
+        background-color $red
+        border-radius 8px
+        transform translateX(-50%)
+
+    &__bottom
+        &-bg
+            padding 55px 16px 24px
+            width 100%
+            height 290px
+            position absolute
+            left 0
+            bottom 0
+            clip-path polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+            overflow hidden
+            opacity 0
+            background-color rgba($black, .75)
+            backdrop-filter blur(12px)
+            border-radius 0 0 8px 8px
+            box-sizing border-box
+            transition opacity 650ms 600ms
+
+    .btn
+        width 160px
+        height 48px
+        line-height 21px
+        font-size 18px
+
+        &__wrap
+            justify-content center
+
+    &__cancel
+        width 32px
+        height 32px
+        position absolute
+        top 0
+        right 0
+        border 0
+        opacity 0
+        background url(../img/svg/btn-cancel.svg) no-repeat center
+        background-size cover
+        cursor pointer
+        transition opacity 250ms 1200ms
+
+        // &:hover
+        //     opacity .5
+        //     transition opacity 250ms
+
+
+.animation
+    .charitem
+        &__bg
+        &__cancel
+        &__bottom-bg
+            opacity 1

@@ -1,0 +1,10 @@
+include var-login__social
+
+
+.login__social
+    .login__social-title= socialBox.title
+    .login__social-icns
+        each item in socialBox.icns
+            .login__social-icn
+                a(href= item.link)
+                    img(src= item.icnUrl, alt= item.icnAlt)

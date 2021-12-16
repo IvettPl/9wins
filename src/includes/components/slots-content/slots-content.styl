@@ -1,0 +1,51 @@
+.sort
+    width 100%
+
+    .center
+        padding 0
+        display flex
+        flex-direction column
+        align-items center
+
+    &__header
+        &-list
+            display inline-flex
+            align-items center
+            position relative
+
+        &-item
+            padding 11px 27px
+            line-height 18px
+            font-size 13px
+            color $gray-superlight
+            cursor pointer
+
+    &__content
+        width 100%
+        display flex
+        align-items center
+        flex-wrap wrap
+
+        .cat-slider__item
+            margin  0 calc((((100% - 8px) - (160px * 6)) / 6) / 2) 56px
+            width 160px
+            height 160px
+            overflow hidden
+
+            @media(max-width 1024px)
+                margin  0 calc((((100% - 8px) - (160px * 5)) / 5) / 2) 56px
+
+            @media(max-width 850px)
+                margin  0 calc((((100% - 8px) - (160px * 4)) / 4) / 2) 56px
+
+            @media(max-width 680px)
+                margin  0 calc((((100% - 8px) - (160px * 3)) / 3) / 2) 56px
+
+            @media(max-width 510px)
+                margin  0 calc((((100% - 8px) - (160px * 2)) / 2) / 2) 56px
+
+            a
+                display block
+
+            // &:nth-child(6n + 6)
+            //     margin-right 0

@@ -1,0 +1,23 @@
+include vars-menu
+
+
+nav.header-nav
+    button.header-nav__close
+    .header-nav__tabs
+        .header-nav__tabs-content
+            ul.header-nav__list.active(data-tab-content="1")
+                each item in menuCasino
+                    li.header-nav__item
+                        a.header-nav__link(href= item.link)
+                            span.header-nav__icn!= item.icn
+                            span.header-nav__title= item.title
+            ul.header-nav__list(data-tab-content="2")
+                each item in menuSport
+                    li.header-nav__item
+                        a.header-nav__link(href= item.link)
+                            span.header-nav__icn!= item.icn
+                            span.header-nav__title= item.title
+        include ./../../../modules/login/login-menu/login-menu
+        .header-nav__tabs-head
+            a.header-nav__tabs-head-item.active(href="##", data-tab="1") Casino
+            a.header-nav__tabs-head-item(href="##", data-tab="2") Sport

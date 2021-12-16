@@ -1,0 +1,26 @@
+mixin bonusList(listItems)
+    each item in listItems
+        .swiper-slide.item
+            .item__front
+                .item__bg
+                    img(src= item.bgPath, alt= item.bgAlt)
+                .item__info
+                    if(item.cancel)
+                        include ./../../modules/cancel-bonus/cancel-bonus
+                        button(type="button").item__info-cancel
+                    if(item.nobonus)
+                        include ./../../modules/cancel-bonus/cancel-nobonus
+                    if(item.stiker)
+                        +stiker(item.stiker.title, item.stiker.subClass)
+                    if(item.title)
+                        .item__title
+                            span.item__title-text!= item.title
+                            span.item__title-percent= item.procent
+                    if(item.title)
+                        //- include ./../../modules/progress/progress
+                    include ./item-bottom/item-bottom
+            if(item.btnBack)
+                .item__back
+                    p!= item.textBack
+                    .btn__wrap
+                        +button(item.btnBack)

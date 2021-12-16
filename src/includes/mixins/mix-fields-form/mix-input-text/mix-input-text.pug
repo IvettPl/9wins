@@ -1,0 +1,11 @@
+mixin inputText(params)
+    input(
+        type= params.type
+        id= params.id ? params.id : false
+        class= params.class ? params.class : ''
+        name= params.name ? params.name : false
+        required= params.required ? params.required : false
+        disabled= params.disabled ? params.disabled : false
+        value= params.value ? params.value : false
+        placeholder= params.placeholder ? params.placeholder : false
+    )

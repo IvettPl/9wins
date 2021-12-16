@@ -1,0 +1,32 @@
+include ./mix-stiker/mix-stiker
+
+
+mixin charItem(content)
+    each item in content
+        div(class= item.claccName)
+            .charitem__front
+                .charitem__bg
+                    picture
+                        source(srcset= item.webp, type="image/webp")
+                        img(src= item.src, srcset= item.src2x, alt= item.srcAlt)
+                .charitem__info
+                    if(item.cancel)
+                        include ./char-cancel/char-cancel
+                        button.charitem__cancel(type="button")
+                    +stiker(item.stiker.title, item.stiker.subClass)
+                    if(item.place)
+                        .charitem__place!= item.place
+                    if(item.banner)
+                        include ./char-banner/char-banner
+                    if(item.progress)
+                        include ./progress/progress
+                    .charitem__bottom-bg
+                        if(item.infotext)
+                            include ./text-infoblock/text-infoblock
+                        if(item.bet)
+                            include ./char-bet/char-bet
+                        include ./char-total/char-total
+                        .btn__wrap
+                            each btn in item.btnsFront
+                                +button(btn)
+            include ./char-back/char-back

@@ -1,0 +1,98 @@
+html
+    font-size 62.5%
+
+html,
+body
+    height 100%
+
+body
+    min-width 375px
+    font-family 'Roboto', sans-serif
+    line-height 22px
+    font-size 17px
+    font-weight 400
+    color $gray-superlight
+    background $black
+
+header,
+aside,
+section,
+footer
+    display block
+
+/*placeholder styles*/
+::-webkit-input-placeholder
+    color $gray-lighter
+
+::-moz-placeholder
+    color $gray-lighter
+
+:-moz-placeholder
+    color $gray-lighter
+
+:-ms-input-placeholder
+    color $gray-lighter
+
+:focus::-webkit-input-placeholder
+    color transparent
+
+:focus::-moz-placeholder
+    color transparent
+
+:focus:-moz-placeholder
+    color transparent
+
+:focus:-ms-input-placeholder
+    color transparent
+
+a
+    text-decoration none
+
+img
+    max-width 100%
+    display block
+
+button
+    display block
+    padding 0
+    border 0
+    background none
+
+
+.wrapper
+    padding-top 56px
+    width 100%
+    min-height 100vh
+    display flex
+    flex-direction column
+    justify-content space-between
+    overflow hidden
+    box-sizing border-box
+
+.center
+.center__header
+    margin 0 auto
+    padding 0 20px
+    width 100%
+    box-sizing border-box
+
+    @media(max-width 767px)
+        padding 0 14px
+
+.center
+    max-width 1160px
+
+.center
+    &__header
+        max-width 1448px
+        display flex
+        align-items center
+        justify-content space-between
+
+.page-panel
+    margin 16px 0 32px
+    display inline-flex
+    align-items center
+    position relative
+    background-color $dark
+    border-radius 20px

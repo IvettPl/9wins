@@ -1,0 +1,119 @@
+.slider-mod
+    margin-bottom 55px
+    width 100%
+
+    &--home
+        margin-bottom 32px
+
+    &.hide
+        display none
+
+    .center
+        padding-right 0
+
+    &__title
+        color $green-dark
+
+        h3
+            line-height 41px
+            font-size 34px
+            font-weight 700
+            letter-spacing .0374px
+
+    &__list
+        padding-top 30px
+        width 100%
+
+    &--available
+        .item__front
+            .btn
+                &__wrap
+                    justify-content space-between
+
+                &--grey
+                    padding 0 19px
+
+                &--orange
+                    padding 0 62px
+
+                    @media(max-width 767px)
+                        padding 0 55px
+
+
+    &--nobonuses
+        margin-top 40px
+        display none
+
+        &.show
+            display block
+
+        .center
+            display flex
+            justify-content center
+
+        .item
+            &__bottom
+                height 122px
+                backdrop-filter blur(0)
+                background-color rgba($black, 1)
+
+        .cancel-bonus
+            line-height 20px
+            font-size 15px
+            letter-spacing -.24px
+            opacity 1
+            visibility visible
+            backdrop-filter blur(12px)
+            transform translateY(50%)
+            background-color rgba($gray, .75)
+
+            .btn
+                padding 0 42px
+                height 48px
+
+                &__wrap
+                    margin-top 30px
+                    justify-content center
+
+
+.bonus__title
+    margin 0 auto 15px
+    padding 16px 35px
+    max-width 352px
+    width 100%
+    line-height 32px
+    font-size 22px
+    text-align center
+    position relative
+    color $orange-light
+    box-sizing border-box
+
+    @media(max-width 450px)
+        padding 16px 35px 16px 0
+        max-width inherit
+        width calc(100% - 28px)
+        text-align left
+
+
+    &:before
+    &:after
+        content ''
+        position absolute
+        top 50%
+        transform translateY(-50%)
+
+    &:before
+        width 32px
+        height 32px
+        right 0
+        border-radius 50%
+        background-color $gray
+
+    &:after
+        margin-top 1px
+        width 0
+        height 0
+        right 10px
+        border-top 6px solid $gray-light
+        border-left 6px solid transparent
+        border-right 6px solid transparent

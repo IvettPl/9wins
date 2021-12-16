@@ -1,0 +1,15 @@
+.item__bottom
+    .item__bottom-animbox
+        if(item.itemBottomInfo)
+            each info in item.itemBottomInfo
+                if(info.subClass)
+                    div(class='item__bottom-block ' + (info.subClass ? 'item__bottom-block--' + info.subClass : ''))
+                        .item__bottom-title= info.title
+                        p= info.text
+                else
+                    .item__bottom-block
+                        .item__bottom-title= info.title
+                        p= info.text
+            .btn__wrap
+                each btn in item.btnFront
+                    +button(btn)

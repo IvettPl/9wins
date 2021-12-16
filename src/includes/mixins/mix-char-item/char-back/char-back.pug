@@ -1,0 +1,5 @@
+.charitem__back
+    p!= item.backText
+    .btn__wrap
+        each backBtn in item.btnsBack
+            +button(backBtn)
