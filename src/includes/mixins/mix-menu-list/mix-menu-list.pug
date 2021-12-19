@@ -1,0 +1,21 @@
+mixin menuList(list)
+    ul(class="list" + (list.subClass ? ' ' + list.subClass : ''))
+        each item in list.items
+            li(class="list__item" data-screen= item.attr ? item.attr : false)
+                if(item.link)
+                    a(class="list__item-link" href= item.link)
+                        if(item.icn)
+                            span(class="list__item-icn")
+                                img(src= item.icn, alt= item.alt)
+                        else if(item.svg)
+                            span(class="list__item-icn")
+                                != item.svg
+                        span(class="list__item-title")!= item.title
+                else
+                    if(item.icn)
+                        span(class="list__item-icn")
+                            img(src= item.icn, alt= item.alt)
+                    else if(item.svg)
+                        span(class="list__item-icn")
+                            != item.svg
+                    span(class="list__item-title")!= item.title

@@ -1,41 +1,51 @@
-const btnShowLoginPopup = document.querySelector('.js-btn--login');
+const btnShowLoginPopup = document.querySelectorAll('.js-btn--login');
 const loginPopup = document.querySelector('#login');
 const overlay = document.querySelector('.overlay');
-const close = document.querySelector('#login .header-nav__close');
+const menuPanel = document.querySelector('.header-nav');
+
+const close = document.querySelectorAll('.header-nav__close');
 
 const socIcnItems = document.querySelectorAll('.login__social-icn');
-const socIcnsList = document.querySelector('.login__social-icns');
 const wrapper = document.querySelector('.wrapper');
 
 
-btnShowLoginPopup.addEventListener('click', function() {
-    loginPopup.classList.add('show');
-    overlay.classList.add('show');
-});
 
-overlay.addEventListener('click', function() {
-    loginPopup.classList.remove('show');
+function closed() {
     overlay.classList.remove('show');
-});
-
-close.addEventListener('click', function() {
     loginPopup.classList.remove('show');
-    overlay.classList.remove('show');
-});
-
-
-//demo registration
-if(socIcnsList) {
-    socIcnsList.addEventListener('click', event => {
-        if(event.target.tagName !== 'IMG') {
-            return false;
-        } else {
-            wrapper.classList.add('wrapper--reg');
-            loginPopup.classList.remove('show');
-            overlay.classList.remove('show');
-        }
-    });
 }
 
 
+// open login popup
+btnShowLoginPopup.forEach(el => {
+    el.addEventListener('click', function() {
+        loginPopup.classList.add('show');
 
+        if(!overlay.classList.contains('show')) {
+            overlay.classList.add('show');
+        }
+
+        if(menuPanel.classList.contains('show')) {
+            menuPanel.classList.remove('show');
+        }
+    });
+});
+
+
+// close popup and overlay cliick close btn
+close.forEach(el => {
+    el.addEventListener('click', closed);
+});
+
+// close popup and overlay cliick overlay
+overlay.addEventListener('click', closed);
+
+
+
+//demo registration
+socIcnItems.forEach(el => {
+    el.addEventListener('click', function(){
+        closed();
+        wrapper.classList.add('wrapper--reg');
+    });
+});

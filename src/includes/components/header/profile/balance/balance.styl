@@ -1,0 +1,64 @@
+.balance
+    width 100%
+    display flex
+    flex-direction column
+    align-items center
+    position relative
+    box-sizing border-box
+
+    .btn-deposite
+        position absolute
+        top 50%
+        left 50%
+        transform translate(-50%, -50%)
+
+    &__user
+        &-info
+            padding-bottom 26px
+            width 100%
+            text-align center
+
+        &-id
+            margin-bottom 4px
+            line-height 20px
+            font-size 15px
+            color $gray-lighter
+            letter-spacing -0.24px
+
+        &-condition
+            line-height 28px
+            font-size 24px
+            color $green
+
+    &__columns
+        width 100%
+        display flex
+        justify-content space-between
+        position relative
+
+    &__column
+        padding 20px 0
+        width calc(50% - 11px)
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+        color $white
+        background-color $gray
+        border-radius 16px
+
+        &:last-child
+            .balance__column-sum
+                color $red
+
+        &-sum
+            line-height 34px
+            font-size 28px
+            color $yellow
+            font-weight 700
+            letter-spacing 0.364px
+
+        &-title
+            line-height 20px
+            font-size 15px
+            letter-spacing -0.24px

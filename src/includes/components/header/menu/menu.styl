@@ -15,6 +15,10 @@
     &.show
         transform translateX(0)
 
+    .login__box-default
+        @media(min-width 1025px)
+            display none
+
     &__close
         width 24px
         height 24px
@@ -140,11 +144,12 @@
 
 .wrapper--reg
     .header-nav
-        &__list
-            &:last-child
-                display block
+        .header-nav
+            &__list
+                &:last-child
+                    display block
 
-        &__tabs
-            &-head
-                opacity 1
-                visibility visible
+            &__tabs
+                &-head
+                    opacity 1
+                    visibility visible

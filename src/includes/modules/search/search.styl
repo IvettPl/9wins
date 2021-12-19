@@ -1,0 +1,38 @@
+.search
+    width 40px
+    height 100%
+    display flex
+    align-items center
+    justify-content flex-end
+    position absolute
+    top 0
+    right 0
+    overflow hidden
+    background-color $dark
+    transition width 250ms
+
+    .search__btn-open
+        width 40px
+        height 40px
+        position absolute
+        right 0
+        top 50%
+        opacity 1
+        visibility visible
+        background $dark url(../img/svg/btn-search.svg) no-repeat center
+        transform translateY(-50%)
+        transition opacity 250ms
+
+    &__btn
+        width 40px
+        height 40px
+        flex-shrink 0
+        background url(../img/svg/btn-close.svg) no-repeat center
+        cursor pointer
+
+    .field__search
+        padding-left 40px
+        width 100%
+        height 100%
+        background $dark url(../img/svg/icn-back.svg) no-repeat 10px center
+        box-sizing border-box

@@ -1,0 +1,13 @@
+include var-personal
+
+.personal__list
+    each item in personalItems
+        div(class="personal__list-item" + (item.cubClass ? ' ' + item.cubClass : ''))
+            .personal__list-info
+                label!= item.label
+                +inputText(item.inputText)
+                span.personal__status= item.note
+            .personal__list-btns
+                +button(item.btnConfirm)
+                .personal__list-status
+                    img(src="./img/svg/icn-exclude.svg", alt="Ok")

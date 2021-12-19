@@ -1,0 +1,19 @@
+include var-search-filter-panel
+
+
+.apply-filter
+    .apply-filter__wrap
+        button.header-nav__close
+        each item in filterPanel
+            .apply-filter__group
+                .apply-filter__title!= item.title
+                .apply-filter__list
+                    each field in item.fields
+                        .apply-filter__list-item
+                            +checkbox(field)
+                            if(field.img)
+                                label(for= field.id)!= field.img
+                            else
+                                label(for= field.id)= field.label
+        .btn__wrap
+            +button(applyFilterBtn)

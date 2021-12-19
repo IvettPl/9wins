@@ -1,0 +1,34 @@
+.sort
+    &-panel
+        margin 16px 0 32px
+        display inline-flex
+        align-items center
+        position relative
+        overflow hidden
+        background-color $dark
+        border-radius 20px
+
+        &.show
+            .search
+                width 100%
+
+                &-filter
+                    width 40px
+
+                &__btn-open
+                    opacity 0
+                    visibility hidden
+
+    &__header
+        &-list
+            padding-right 40px
+            display inline-flex
+            align-items center
+            position relative
+
+        &-item
+            padding 11px 27px
+            line-height 18px
+            font-size 13px
+            color $gray-superlight
+            cursor pointer

@@ -1,0 +1,35 @@
+.list
+    margin-top 45px
+    width 100%
+    box-sizing border-box
+
+    &__item
+        margin-bottom 16px
+        padding 13px 0
+        width 100%
+        display flex
+        align-items center
+        cursor pointer
+
+        &:hover
+            path
+            g
+                fill $white
+                transition fill 250ms
+
+        &-icn
+            margin-right 8px
+            width 24px
+            height 24px
+            display flex
+            align-items center
+            justify-content center
+
+            svg
+            span
+                display block
+
+        &-title
+            line-height 24px
+            color $white
+            letter-spacing -0.41px

@@ -3,7 +3,10 @@ include vars-tools
 
 .tools-list
     each item in tools
-        .tools-list__item
+        div(class="tools-list__item" + (item.subClass ? ' ' + item.subClass : ''))
             a.tools-list__link(href= item.link)
-                span.tools-list__icn!= item.icn
+                if(item.icn)
+                    span.tools-list__icn!= item.icn
+                else
+                    include ./../../../modules/btn-deposite/btn-deposite
                 span.tools-list__title= item.title

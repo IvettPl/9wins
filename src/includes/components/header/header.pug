@@ -3,9 +3,13 @@ header.header
         .header__tools
             button(type="button").header__menu-btn
             include ./tools-list/tools-list
+            .header__search
+                include ./../../modules/search/search-btn-open/search-btn-open
+
         .logo
             a(href="./")
                 img(src="./img/svg/logo.svg", alt="9winz")
         include ./right-column/right-column
 
 include ./menu/menu
+include ./profile/profile

@@ -19,12 +19,27 @@
             width 100%
             display block
 
+    .login__box-default
+        @media(max-width 1024px)
+            display none
+
     &__tools
         display inline-flex
         align-items center
 
+    &__search
+        margin-left 24px
+        width 24px
+        height 24px
+
+        @media(max-width 1024px)
+            position absolute
+            right 20px
+            top 50%
+            transform translateY(-50%)
+
     &__menu-btn
-        margin-right 15px
+        margin-right 14px
         padding 0
         width 24px
         height 24px

@@ -1,0 +1,122 @@
+.apply-filter
+    margin-left -400px
+    width 100%
+    max-width 800px
+    position absolute
+    top 16px
+    left 50%
+    z-index 3
+    overflow hidden
+    opacity 0
+    visibility hidden
+    background-color $black
+    border-radius 24px
+    transform translateY(-50%)
+    transition transform 400ms, opacity 400ms
+
+    @media(max-width 768px)
+        margin-left -187px
+        max-width 374px
+
+    &.show
+        opacity 1
+        visibility visible
+        transform translateY(0)
+
+    &__wrap
+        padding 18px 32px 0
+        width 100%
+        box-sizing border-box
+
+        @media(max-width 768px)
+            padding 18px 16px 0
+
+    &__group
+        margin-bottom 32px
+        width 100%
+
+        @media(max-width 768px)
+            margin-bottom 16px
+
+    &__list
+        width 100%
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+        align-items center
+
+        &-item
+            width 160px
+            height 47px
+            display inline-flex
+            position relative
+            background-color $gray
+            border-radius 12px
+            overflow hidden
+            box-shadow rgba($dark, 0.05)
+            cursor pointer
+
+            @media(max-width 768px)
+                margin-bottom 16px
+
+            label
+                width 100%
+                display flex
+                align-items center
+                justify-content center
+                line-height 47px
+                color $gray-light
+                text-align center
+                letter-spacing -0.408px
+                cursor pointer
+                transition background 250ms, color 250ms
+
+                &:hover
+                    color $white
+                    background-color $blue-darker
+
+                svg
+                    width 40px
+                    height 40px
+
+            input
+                position absolute
+                top 0
+                left 0
+                opacity 0
+                appearance none
+
+            input:checked + label
+                color $white
+                background-color $blue-darker
+
+    &__field
+        &-smtennis
+        &-volleyball
+        &-ufc
+            & + label
+                #smtennis-svg
+                #volleyball-svg
+                #ufc-svg
+                    path
+                        stroke $white
+
+    &__title
+        margin-bottom 18px
+        line-height 28px
+        font-size 22px
+        color $orange-light
+        letter-spacing 0.35px
+
+    .btn
+        width 160px
+        height 44px
+        line-height 21px
+        font-size 18px
+
+        @media(max-width 768px)
+            width 220px
+
+        &__wrap
+            margin-bottom 36px
+            justify-content center

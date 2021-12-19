@@ -1,0 +1,11 @@
+include var-profile
+
+#profile-panel.profile
+    .profile__close
+    include ./user/user
+    .profile__area
+        #profile-screen.screen.profile__screen
+            include ./balance/balance
+            +menuList(profileList)
+        #personal-screen.screen.personal__screen
+            include ./personal/personal

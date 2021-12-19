@@ -6,3 +6,5 @@ require('./part/init-cancel-popup.js');
 require('./part/init-animate.js');
 require('./part/init-filter.js');
 require('./part/init-popups.js');
+require('./part/init-search.js');
+require('./part/init-profile-bar.js');

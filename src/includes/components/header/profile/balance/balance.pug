@@ -1,0 +1,13 @@
+include var-balance
+
+
+.balance
+    .balance__user-info
+        .balance__user-id 2394876452002
+        .balance__user-condition Regular
+    .balance__columns
+        each item in balanceBoxes
+            .balance__column
+                .balance__column-sum!= item.sum
+                .balance__column-title!= item.title
+        include ./../../../../modules/btn-deposite/btn-deposite

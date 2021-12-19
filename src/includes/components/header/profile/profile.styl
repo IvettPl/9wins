@@ -1,0 +1,51 @@
+.profile
+    padding-top 8px
+    width 100%
+    max-width 370px
+    height 100%
+    position fixed
+    top 0
+    right 0
+    z-index 3
+    transform translateX(100%)
+    background-color $black
+    box-sizing border-box
+    transition transform 300ms
+
+    &.show
+        transform translateX(0)
+
+    &__close
+        width 40px
+        height 40px
+        position absolute
+        top 0
+        right 0
+        background url(../img/svg/btn-close.svg) no-repeat center
+        cursor pointer
+        transition opacity 250ms
+
+        &:hover
+            opacity 0.6
+
+    &__area
+        padding-bottom 20px
+        width 100%
+        height calc(100% - 182px)
+        position relative
+        overflow hidden
+        box-sizing border-box
+
+
+
+
+.screen
+    padding 0 16px
+    width 100%
+    height 100%
+    position absolute
+    top 0
+    left 0
+    overflow auto
+    background-color $black
+    box-sizing border-box

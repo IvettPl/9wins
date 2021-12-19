@@ -1,0 +1,103 @@
+.personal
+    &__screen
+        transform translateX(100%)
+        transition transform 300ms
+
+        &.show
+            transform translateX(0)
+
+    &__list
+        width 100%
+
+        &-item
+            margin-top 24px
+            padding 9px 16px 9px 72px
+            width 100%
+            height 80px
+            display flex
+            align-items center
+            background $gray url(../img/svg/icn-favorite-star-grey.svg) no-repeat 16px center
+            background-size 40px
+            border-radius 16px
+            box-sizing border-box
+
+            &:first-child
+                margin-top 0
+
+            &.confirm
+                .personal
+                    &__status
+                        opacity 1
+                        color $green
+
+                    &__list-status
+                        opacity 1
+                        visibility visible
+
+            &.noconfirm
+                .personal__status
+                    opacity 1
+                    color $red
+
+                .btn
+                    opacity 1
+                    visibility visible
+
+
+        &-icn
+            margin-right 16px
+            width 40px
+            height 40px
+            flex-shrink 0
+
+        &-info
+            width calc(100% - 100px)
+            height 100%
+            display flex
+            flex-direction column
+            justify-content flex-start
+
+            label
+            span
+                display block
+
+            label
+                line-height 18px
+                font-size 13px
+                color $gray-light
+                letter-spacing -0.08px
+
+            input
+                margin 0
+                width 100%
+                color $white
+                letter-spacing -0.41px
+                border 0
+                background 0
+
+        &-btns
+            margin-left 10px
+            width 90px
+            flex-shrink 0
+            position relative
+            text-align right
+
+            .btn
+                opacity 0
+                visibility hidden
+
+        &-status
+            width 20px
+            height 20px
+            opacity 0
+            visibility hidden
+            position absolute
+            top 50%
+            right 0
+            transform translateY(-50%)
+
+    &__status
+        margin-top 5px
+        line-height 16px
+        font-size 12px
+        opacity 0
