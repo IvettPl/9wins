@@ -1,0 +1,54 @@
+.tabs
+    &--cashier
+        max-width 354px
+
+        .tabs
+            &__content
+                &-viewport
+                    width 300%
+                    display flex
+                    position relative
+                    top 0
+                    left 0
+                    transition transform 300ms
+
+                &-item
+                    width calc(100% / 3)
+                    flex-shrink 0
+                    position relative
+
+        &.tab-1
+            .tabs
+                &__header:before
+                &__content-viewport
+                    transform translateX(0)
+
+                &__header-item
+                    &:first-child
+                        color $green
+
+        &.tab-2
+            .tabs
+                &__content-viewport
+                    transform translateX(calc(-100% / 3))
+
+                &__header
+                    &:before
+                        transform translateX(100%)
+
+                    &-item
+                        &:nth-child(2)
+                            color $green
+
+        &.tab-3
+            .tabs
+                &__content-viewport
+                    transform translateX(calc(-100% / 3 * 2))
+
+                &__header
+                    &:before
+                        transform translateX(200%)
+
+                    &-item
+                        &:last-child
+                            color $green

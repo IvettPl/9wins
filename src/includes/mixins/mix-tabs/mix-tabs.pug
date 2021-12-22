@@ -1,0 +1,11 @@
+mixin tabs(params)
+    div(class="tabs" + (params.subClass ? ' ' + params.subClass : ''))
+        .tabs__header
+            each headeritem in params.headerItems
+                div(
+                    class="tabs__header-item" + (headeritem.subClass ? ' ' +  headeritem.subClass : '')
+                    data-tab= headeritem.data ? headeritem.data : false
+                )= headeritem.title
+        .tabs__content
+            if(block)
+                block

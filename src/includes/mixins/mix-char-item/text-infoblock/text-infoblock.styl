@@ -4,6 +4,10 @@
             margin-bottom 15px
             color $yellow
             text-align center
+            position relative
+            opacity 0
+            transform translateY(-100%)
+            transition opacity 400ms 2200ms, transform 400ms 2200ms
 
         &-title
             line-height 28px
@@ -13,3 +17,8 @@
 
         &-desc
             letter-spacing -0.408px
+
+.animation
+    .charitem__info-text
+        opacity 1
+        transform translateY(0)

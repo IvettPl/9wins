@@ -8,3 +8,9 @@ require('./part/init-filter.js');
 require('./part/init-popups.js');
 require('./part/init-search.js');
 require('./part/init-profile-bar.js');
+
+require('./part/init-tabs.js');
+require('./part/init-tabs-screen-states.js');
+
+require('./part/init-masks.js');
+require('./part/select.js');

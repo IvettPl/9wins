@@ -6,52 +6,62 @@ include vars-main-content
 include ./../../modules/banner-slider/banner-slider
 
 //slider Sports
-.slider-mod.slider-mod--home.js-animate
+.slider-mod.slider-mod--home.slider-mod--sports.js-animate
     .center
+        a.cat-all__link(href="##") See all
         .slider-mod__title
             .slider-mod__title-box
                 img(src="./img/svg/icn-sport.svg", alt="Virtual games")
                 h2 Sports
-            a.cat-all__link(href="##") See all
 
         .swiper.cat-slider
             .swiper-wrapper
                 +catSlider(sportSlider)
 
+//slider Tournaments
+include ./../../modules/slider-bonuses/slider-tournaments
+
 //slider Virtual games
-.slider-mod.slider-mod--home.js-animate
+.slider-mod.slider-mod--home.slider-mod--games.js-animate
     .center
+        a.cat-all__link(href="##") See all
         .slider-mod__title
             .slider-mod__title-box
                 img(src="./img/svg/icn-games.svg", alt="Virtual games")
                 h2 Virtual games
-            a.cat-all__link(href="##") See all
 
         .swiper.cat-slider
             .swiper-wrapper
                 +catSlider(sportSlider)
 
-//slider Live casino
-.slider-mod.slider-mod--home.js-animate
+//slider Epics
+.slider-mod.slider-mod--home.slider-mod--epics.js-animate
     .center
+        .swiper.cat-slider
+            .swiper-wrapper
+                +epics(epicsItems)
+
+//slider Live casino
+.slider-mod.slider-mod--home.slider-mod--live.js-animate
+    .center
+        a.cat-all__link(href="##") See all
         .slider-mod__title
             .slider-mod__title-box
                 img(src="./img/svg/icn-casino.svg", alt="Live casino")
                 h2 Live casino
-            a.cat-all__link(href="##") See all
 
         .swiper.cat-slider
             .swiper-wrapper
                 +catSlider(sportSlider)
 
 //slider Slots
-.slider-mod.slider-mod--home.js-animate
+.slider-mod.slider-mod--home.slider-mod--slots.js-animate
     .center
+        a.cat-all__link(href="slots.html") See all
         .slider-mod__title
             .slider-mod__title-box
                 img(src="./img/svg/icn-slots.svg", alt="Slots")
                 h2 Slots
-            a.cat-all__link(href="##") See all
 
         .swiper.cat-slider
             .swiper-wrapper
@@ -60,6 +70,3 @@ include ./../../modules/banner-slider/banner-slider
 
 //slider Bonuses
 include ./../../modules/slider-bonuses/slider-bonuses
-
-//block icns-panel
-include ./../../modules/icns-panel/icns-panel

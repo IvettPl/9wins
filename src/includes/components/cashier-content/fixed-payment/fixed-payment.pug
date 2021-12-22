@@ -1,0 +1,13 @@
+-
+    let fixedPay = [
+        {price: '500,00'},
+        {price: '1000,00'},
+        {price: '5000,00'}
+    ]
+
+
+.fixed-payment
+    each item in fixedPay
+        .fixed-payment__item
+            button(type="button") ₹
+                span= item.price

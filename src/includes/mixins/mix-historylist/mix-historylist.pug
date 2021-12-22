@@ -1,0 +1,16 @@
+mixin historylist(list)
+    div(class='historylist' + (list.subClass ? ' ' + list.subClass : ''))
+        each item in list.items
+            .historylist__item
+                .historylist__item-paylogo
+                    img(src= item.logoUrl, alt= item.logoAlt)
+                .historylist__item-payment
+                    .historylist__item-price!= item.price
+                    .historylist__item-data= item.data
+                .historylist__item-status
+                    div(class="historylist__item-state" + (item.subClass ? ' ' + item.subClass : ''))= item.state
+                    if(item.statedata)
+                        .historylist__item-statedata= item.statedata
+        if(list.showmore)
+            .btn__wrap
+                +button(list.showmore)

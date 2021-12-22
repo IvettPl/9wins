@@ -1,0 +1,27 @@
+.cashier-form.cashier-form--request.cashier--tabscreen.js-hide
+    .cashier__title Payment details
+    form(id="request" action="" method="POST" name="request")
+        .form-line
+            label(for="request-amount") Withdrawal amount
+            .form-line__field-wrap
+                .form-line__field-icn.hover
+                    img(src="./img/svg/clear.svg", alt="Clear")
+                +inputText(requestAmount)
+        .form-line
+            label(for="cart-number") Card number
+            +inputText(cartNumber)
+        .form-line
+            label(for="cart-name") Name on card
+            +inputText(cartName)
+        .form-line.form-line--double
+            .form-line__box
+                label(for="expiry-date") Expiry date
+                +inputText(expiryDate)
+            .form-line__box
+                label(for="security-code") Security code
+                +inputText(securityCode)
+        .form-line
+            +checkbox(rememberInput)
+            label.label.label__checkbox(for="remember") Remember card details
+        .btn__wrap
+            +button(withdrawBtn)

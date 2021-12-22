@@ -13,7 +13,10 @@ mixin charItem(content)
                     if(item.cancel)
                         include ./char-cancel/char-cancel
                         button.charitem__cancel(type="button")
-                    +stiker(item.stiker.title, item.stiker.subClass)
+                    if(item.stiker)
+                        +stiker(item.stiker.title, item.stiker.subClass)
+                    if(item.nowstiker)
+                        include ./nowstiker/nowstiker
                     if(item.place)
                         .charitem__place!= item.place
                     if(item.banner)

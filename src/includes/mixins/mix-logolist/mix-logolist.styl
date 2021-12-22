@@ -1,0 +1,29 @@
+.logolist
+    width 100%
+    display flex
+    flex-wrap wrap
+    align-items center
+    justify-content center
+
+    &__wrap
+        margin-bottom 35px
+        width 100%
+
+    .center
+        padding-right 0
+
+    &__title
+        margin-bottom 20px
+        line-height 23px
+        font-size 20px
+        display none
+        color $orange-light
+
+        @media(max-width 768px)
+            display block
+
+    &__item
+        margin-right 18px
+        height 38px
+        display flex
+        align-items center

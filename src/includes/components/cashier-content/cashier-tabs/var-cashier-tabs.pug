@@ -1,0 +1,206 @@
+-
+    const cashierTabs = {
+        subClass: 'tabs--cashier tab-1',
+        headerItems: [
+            {
+                title: 'Deposit',
+                data: 'tab-1',
+            },
+            {
+                title: 'Withdrawal',
+                data: 'tab-2',
+            },
+            {
+                title: 'History',
+                data: 'tab-3',
+            }
+        ]
+    }
+
+
+-
+    let cartlist = [
+        {
+            logo: './img/logos/mastercard-box.svg',
+            alt: 'Mastercart'
+        },
+        {
+            logo: './img/logos/visa-box.svg',
+            alt: 'VISA'
+        },
+        {
+            logo: './img/logos/yesbank-box.svg',
+            alt: 'YES BANK'
+        },
+        {
+            logo: './img/logos/phonepe.svg',
+            alt: 'PhonePe'
+        }
+    ]
+
+
+-
+    const newRequestBtn = {
+        className: 'btn',
+        id: 'new-request',
+        type: 'button',
+        label: 'New request'
+    }
+
+
+-
+    const depositHistoryBtn = {
+        className: 'btn',
+        id: 'history-deposit',
+        type: 'button',
+        label: 'Deposit'
+    }
+
+
+-
+    const depozitAmount = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'deposit',
+        placeholder: '0',
+        mask: 'number'
+    }
+-
+    const depozitFirstName = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'first-name',
+        placeholder: 'Input name'
+    }
+-
+    const depozitSurname = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'surname',
+        placeholder: 'Input name'
+    }
+-
+    const depozitWalletId = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'wallet-id'
+    }
+-
+    const depositBtn = {
+        className: 'btn',
+        type: 'submit',
+        label: 'deposit'
+    }
+
+
+
+
+-
+    const requestAmount = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'request-amount'
+    }
+-
+    const cartNumber = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'cart-number',
+        placeholder: 'xxxx xxxx xxxx xxxx',
+        mask: 'cartNumber'
+    }
+-
+    const cartName = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'cart-name',
+        placeholder: 'Input cart name'
+    }
+-
+    const expiryDate = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'expiry-date',
+        placeholder: 'xx/xx',
+        mask: 'date'
+    }
+-
+    const securityCode = {
+        type: 'password',
+        class: 'field field__text',
+        name: 'security-code',
+        placeholder: '***',
+        mask: 'code'
+    }
+-
+    let rememberInput = {
+        type: 'checkbox',
+        id: 'remember',
+        class: 'field field__checkbox',
+        name: 'remember'
+    }
+-
+    const withdrawBtn = {
+        className: 'btn',
+        id: 'deposit-details',
+        type: 'button',
+        label: 'deposit'
+    }
+
+
+-
+    let requestInfoList = {
+        subClass: 'infolist--counter js-hide',
+        items: [
+            {
+                state: 'in process',
+                price: '₹ <span>0,00</span>',
+                data: '08.10.2021'
+            },
+            {
+                state: 'in process',
+                price: '₹ <span>50,00</span>',
+                data: '10.10.2021'
+            }
+        ]
+    }
+
+
+-
+    let historyInfoList = {
+        subClass: 'infolist--history js-hide',
+        showmore: {
+            className: 'btn btn--grey',
+            id: 'load-more',
+            type: 'button',
+            label: 'Load more'
+        },
+        items: [
+            {
+                logoUrl:'./img/logos/mastercard.svg',
+                logoAlt: 'Mastercard',
+                state: 'in process',
+                price: '₹ <span>50,00</span>',
+                data: '08.10.2021',
+                statedata: '10.10.2021'
+            },
+            {
+                logoUrl:'./img/logos/mastercard.svg',
+                logoAlt: 'Mastercard',
+                subClass: 'green',
+                state: 'done',
+                price: '₹ <span>50,00</span>',
+                data: '08.10.2021',
+                statedata: '10.10.2021'
+            },
+            {
+                logoUrl:'./img/logos/mastercard.svg',
+                logoAlt: 'Mastercard',
+                subClass: 'red',
+                state: 'censeled',
+                price: '₹ <span>50,00</span>',
+                data: '08.10.2021',
+                statedata: '10.10.2021'
+            }
+        ]
+    }

@@ -10,4 +10,5 @@ include var-balance
             .balance__column
                 .balance__column-sum!= item.sum
                 .balance__column-title!= item.title
-        include ./../../../../modules/btn-deposite/btn-deposite
+        a.btn-deposite__link(href="cashier.html")
+            include ./../../../../modules/btn-deposite/btn-deposite

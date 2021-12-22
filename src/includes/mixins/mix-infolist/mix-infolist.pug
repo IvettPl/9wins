@@ -1,0 +1,7 @@
+mixin infolist(list)
+    ul(class='infolist' + (list.subClass ? ' ' + list.subClass : ''))
+        each item in list.items
+            li.infolist__item
+                .infolist__state!= item.state
+                .infolist__price!= item.price
+                .infolist__data!= item.data

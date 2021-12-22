@@ -1,9 +1,10 @@
 .charitem
     width 100%
     max-width 352px
-    height 447px
+    height 480px
     position relative
     perspective 1000px
+    border-radius 26px
 
     @media(max-width 767px)
         max-width 332px
@@ -15,6 +16,41 @@
 
             &__back
                 transform rotateY(360deg)
+
+    &--bonus
+        .charitem
+            &__info
+                bottom 0
+
+            &__bottom
+                &-bg
+                    padding-top 44px
+                    height 256px
+
+                    &:before
+                        width 100%
+                        height 100%
+                        top 0
+                        left 0
+                        transform rotate(0)
+
+    &--available
+        .charitem__bottom-bg
+            .btn
+                &--grey
+                    width 94px
+
+                &--orange
+                    width 206px
+
+                    @media(max-width 768px)
+                        width 192px
+
+                &__wrap
+                    justify-content space-between
+
+    &.disabled
+        filter grayscale(1)
 
     &__front
     &__back
@@ -29,8 +65,14 @@
         box-sizing border-box
 
     &__front
+        height calc(100% - 33px)
         display flex
         align-items flex-end
+
+        .btn
+            opacity 0
+            transform translateY(100%)
+            transition opacity 400ms 2400ms, transform 400ms 2400ms
 
     &__bg
         width 100%
@@ -59,9 +101,11 @@
         top 160px
         left 50%
         z-index 1
+        opacity 0
         background-color $red
         border-radius 8px
         transform translateX(-50%)
+        transition opacity 350ms 1400ms
 
     &__bottom
         &-bg
@@ -71,14 +115,27 @@
             position absolute
             left 0
             bottom 0
-            clip-path polygon(0 15%, 100% 0, 100% 100%, 0 100%)
+            // clip-path polygon(0 15%, 100% 0, 100% 100%, 0 100%)
             overflow hidden
-            opacity 0
-            background-color rgba($black, .75)
-            backdrop-filter blur(12px)
-            border-radius 0 0 8px 8px
+            // opacity 0
+            // background-color rgba($black, .75)
+            // backdrop-filter blur(12px)
+            border-radius 0 0 16px 16px
             box-sizing border-box
-            transition opacity 650ms 600ms
+            // transition opacity 650ms 600ms
+
+            &:before
+                content ''
+                width 108%
+                height 102%
+                position absolute
+                left -10px
+                top 24px
+                opacity 0
+                background-color rgba($black, .75)
+                backdrop-filter blur(0)
+                transform rotate(-6deg)
+                transition opacity 600ms 1000ms, backdrop-filter 600ms 1600ms
 
     .btn
         width 160px
@@ -88,6 +145,7 @@
 
         &__wrap
             justify-content center
+            position relative
 
     &__cancel
         width 32px
@@ -112,4 +170,15 @@
         &__bg
         &__cancel
         &__bottom-bg
+        &__place
             opacity 1
+
+        &__bottom-bg
+            &:before
+                opacity 1
+                backdrop-filter blur(12px)
+
+    .charitem__front
+        .btn
+            opacity 1
+            transform translateY(0)

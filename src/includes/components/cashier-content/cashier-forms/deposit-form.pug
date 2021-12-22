@@ -1,0 +1,24 @@
+.cashier-form.cashier-form--payment.cashier--tabscreen.js-hide
+    form(id="payment" action="" method="POST" name="payment")
+        .form-line
+            label(for="deposit") Deposit amount ( min 100 max 50 000)
+            .form-line__field-wrap
+                .form-line__field-icn
+                    img(src="./img/svg/money.svg", alt="Money")
+                +inputText(depozitAmount)
+            span.form-line__note enrollment time - from 2 to 24 hours
+        include ./../fixed-payment/fixed-payment
+        .form-line
+            label(for="first-name") First name
+            +inputText(depozitFirstName)
+        .form-line
+            label(for="surname") Surname
+            +inputText(depozitSurname)
+        .form-line
+            label(for="wallet-id") Wallet ID
+            .form-line__field-wrap
+                .form-line__field-icn.hover
+                    img(src="./img/svg/clear.svg", alt="Clear")
+                +inputText(depozitWalletId)
+        .btn__wrap
+            +button(depositBtn)

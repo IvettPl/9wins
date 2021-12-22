@@ -3,6 +3,10 @@
     width 100%
     display flex
     justify-content space-between
+    position relative
+    opacity 0
+    transform translateY(-100%)
+    transition opacity 400ms 2200ms, transform 400ms 2200ms
 
     &__item
         display inline-flex
@@ -18,3 +22,10 @@
 
     &__label
         letter-spacing -0.408px
+
+
+
+.animation
+    .charbet
+        opacity 1
+        transform translateY(0)

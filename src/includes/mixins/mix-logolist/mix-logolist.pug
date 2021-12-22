@@ -1,0 +1,8 @@
+mixin logolist(list)
+    .logolist__wrap
+        .center
+            .logolist__title!= list.title
+            div(class= list.class)
+                each item in list.items
+                    .logolist__item
+                        img(src= item.img, alt= item.alt)

@@ -34,25 +34,67 @@
                         @media(max-width 1024px)
                             display block
 
+    &--epics
+        display none
+
+        .cat-slider
+            margin-top 0
+
     &__list
         &--home
-            margin-top -70px
+            margin-top -74px
 
             @media(max-width 1024px)
-                margin-top -28px
+                margin-top -32px
+
+    &--tournaments
+        display none
 
 
-    &--home
-        .cat-all__link
-            margin 25px 45px 0 0
+.cat-all__link
+    margin 25px 45px 0 0
+    display block
+    line-height 18px
+    font-size 15px
+    color $blue
+    position absolute
+    top 50px
+    right 0
+    z-index 2
+    opacity 0
+    transition color 250ms
+
+    @media(max-width 1024px)
+        margin 0 16px 0 0
+        top 3px
+
+    &:hover
+        color $blue-light
+
+.wrapper--reg
+    .slider-mod
+        &--tournaments
+        &--epics
             display block
-            line-height 18px
-            font-size 15px
-            color $blue
-            transition color 250ms
 
-            @media(max-width 1024px)
-                margin 0 16px 0 0
+        &__list--home
+            margin-top -32px
 
-            &:hover
-                color $blue-light
+        &__title
+            margin-bottom 5px
+
+            h2
+                line-height 24px
+                font-size 20px
+                font-weight 400
+                color $orange-light
+
+            img
+                display block
+
+    .cat-all__link
+        margin-top 0
+        top 3px
+
+    .cat-slider
+        margin-top 0

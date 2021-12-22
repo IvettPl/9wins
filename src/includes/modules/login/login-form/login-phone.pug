@@ -1,14 +1,17 @@
 .login-form
-    .login-form__line.login-form__line--phone
-        .login-form__line-box
+    .form-line.form-line--double
+        .form-line__box
             label(for="mail") Code
-            +inputText(loginPhoneInput)
-        .login-form__line-box
+            .select
+        .form-line__box
             label(for="mail") Phone number
-            +inputText(loginPhoneInput)
+            .form-line__field-wrap
+                .form-line__field-icn.hover
+                    img(src="./img/svg/clear.svg", alt="Clear")
+                +inputText(loginPhoneInput)
 
-    .login-form__line.login-form__line--code
-        .login-form__line-box
+    .form-line.form-line--double
+        .form-line__box
             label(for="mail") Code
             +inputText(loginCodeInput)
         .btn__wrap

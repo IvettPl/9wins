@@ -1,0 +1,11 @@
+mixin epics(list)
+    each item in list
+        div(class= item.class)
+            .epics__avatar
+                picture
+                    source(srcset= item.webp, type="image/webp")
+                    img(src= item.src, srcset= item.src2x, alt= item.srcAlt)
+            .epics__info
+                .epics__name!= item.name
+                .epics__title!= item.title
+                .epics__price!= item.price

@@ -1,0 +1,14 @@
+include var-cashier-tabs
+
++tabs(cashierTabs)
+    .tabs__content-viewport
+        div.tabs__content-item
+            include ./../carts-list/carts-list-deposit
+            include ./../cashier-forms/deposit-form
+        div.tabs__content-item
+            include ./../empty-box/empty-box
+            include ./../carts-list/carts-list
+            include ./../cashier-forms/request-form
+        div.tabs__content-item
+            include ./../empty-box/empty-box-history
+            include ./../history-list/history-list

@@ -49,7 +49,7 @@
             font-size 18px
 
             &__wrap
-                margin-bottom 98px
+                margin 10px 0 98px
 
     &__title
         margin-bottom 34px
@@ -70,6 +70,7 @@
             display none
 
         &:last-child
+            padding 0
             width 56%
             display block
             background-color $black
@@ -99,6 +100,38 @@
             &__list
                 &:last-child
                     display block
+
+        .charitem
+            height 447px
+
+            &__bg
+                height 108%
+
+            .nowstiker
+                top -4px
+                opacity 1
+
+            &__place
+                top 130px
+                opacity 1
+
+            &__bottom-bg
+                &:before
+                    opacity 1
+                    backdrop-filter filter(12px)
+
+            &__info
+                &-text
+                    opacity 1
+                    transform translateY(0)
+
+            &__bottom-item
+                    opacity 1
+                    transform translateY(0)
+
+            .btn
+                opacity 1
+                transform translateY(0)
 
     &__footer
         padding 15px 0

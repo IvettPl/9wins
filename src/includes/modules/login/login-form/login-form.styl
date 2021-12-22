@@ -1,46 +1,16 @@
 .login-form
     width 100%
 
-    &__line
-        margin-bottom 16px
-        width 100%
-        position relative
-
-        &--phone
-        &--code
-            display flex
-
-        &--phone
-            .login-form__line
-                &-box
-                    width calc(100% - 90px)
+    .form-line
+        &--double
+            &:first-child
+                .form-line__box
+                    width 253px
 
                     &:first-child
-                        margin-right 16px
                         width 74px
-                        flex-shrink 0
 
-
-        &--code
-            justify-content space-between
-
-            .login-form__line-box
-            .btn__wrap
-                width calc(50% - 8px)
-
-            .btn__wrap
-                margin-top 24px
-
-        label
-            margin-bottom 4px
-            display block
-            line-height 20px
-            font-size 15px
-            color $gray-lighter
-            letter-spacing -0.24px
-
-        &--checkbox
-            margin-bottom 24px
-
-            label
-                line-height 12px
+            &:last-child
+                .btn__wrap
+                    margin 24px 0 0
+                    width 163px

@@ -1,0 +1,78 @@
+.cashier-form
+    width 100%
+
+    &--request
+        .btn__wrap
+            margin-top 28px
+
+    &--payment
+        .btn__wrap
+            margin-top 40px
+
+    .form-line
+        margin-bottom 24px
+
+    .label__checkbox
+        font-size 12px
+        color $gray-superlight
+
+
+
+
+
+
+
+.form-line
+    margin-bottom 16px
+    width 100%
+    position relative
+
+    &--double
+        display flex
+        justify-content space-between
+
+    &__box
+        width calc(50% - 16px)
+
+    label
+        margin-bottom 4px
+        display block
+        line-height 20px
+        font-size 15px
+        color $gray-lighter
+
+    &__note
+        margin-top 8px
+        display block
+        font-size 13px
+        color $gray-superlight
+        letter-spacing -0.08px
+
+    &__field
+        &-wrap
+            width 100%
+            position relative
+
+            input
+                padding-right 44px
+
+        &-icn
+            width 24px
+            height 24px
+            position absolute
+            top 50%
+            right 10px
+            transform translateY(-50%)
+
+            &.hover
+                cursor pointer
+                transition opacity 250ms
+
+                &:hover
+                    opacity 0.6
+
+    .label__checkbox
+        margin 0
+        padding 0 0 0 26px
+        line-height 18px
+

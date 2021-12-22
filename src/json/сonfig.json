@@ -7,6 +7,7 @@
             "./css/main.min.css"
         ],
         "scripts": [
+            "https://unpkg.com/imask",
             "./js/swiper-bundle.min.js",
             "./js/main.min.js"
         ],
@@ -27,6 +28,11 @@
     "slots": {
         "title": "Slots",
         "description": "Slots page",
+        "menuIndex": 0
+    },
+    "cashier": {
+        "title": "Cashier",
+        "description": "Cashier page",
         "menuIndex": 0
     }
 }
