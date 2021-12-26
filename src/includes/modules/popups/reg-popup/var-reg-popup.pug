@@ -1,0 +1,90 @@
+-
+    let socialNetwork = {
+        title: 'or login via social network',
+        icns: [
+            {link: '##', icnUrl: './img/svg/icn-fb.svg', icnAlt: 'Facebook'},
+            {link: '##', icnUrl: './img/svg/icn-google.svg', icnAlt: 'Google'},
+            {link: '##', icnUrl: './img/svg/icn-aa.svg', icnAlt: 'Aadhaar'}
+        ]
+    }
+
+
+-
+    let selectPhoneCode = {
+        id: 'reg-phone-code',
+        className: 'select-code',
+        name: 'phone-code',
+        options: [
+            {
+                label: '+93',
+                value: '+93',
+                selected: 'selected'
+            },
+            {
+                label: '+375',
+                value: '+375',
+            },
+            {
+                label: '+7',
+                value: '+7',
+            }
+        ]
+    }
+
+-
+    let fieldPhoneInput = {
+        type: 'text',
+        id: 'login-phone',
+        class: 'field field__text',
+        name: 'phone',
+        placeholder: '000 000 000',
+        mask: 'phone'
+    }
+
+-
+    let verifyCodeInput = {
+        type: 'password',
+        class: 'field field__text',
+        name: 'code',
+        mask: 'verification'
+    }
+
+-
+    verifyGetCodeBtn = {
+        className: 'btn',
+        type: 'button',
+        disabled: true,
+        label: 'Get code'
+    }
+
+-
+    let fieldMailInput = {
+        type: 'text',
+        class: 'field field__text',
+        name: 'mail',
+        placeholder: 'user@mail.com'
+    }
+
+-
+    let fieldPassInput = {
+        type: 'password',
+        class: 'field field__text',
+        name: 'password',
+        placeholder: 'pick a password'
+    }
+
+-
+    let fieldRegCheck = {
+        type: 'checkbox',
+        id: 'privacy-reg',
+        class: 'field field__checkbox',
+        name: 'privacy-reg'
+    }
+
+-
+    registrationBtn = {
+        className: 'btn',
+        type: 'submit',
+        disabled: true,
+        label: 'Registration'
+    }

@@ -1,0 +1,124 @@
+.popup-log
+    width 760px
+
+    @media(min-width 1025px) and (max-height 690px)
+        height calc(100% - 53px)
+        top 53px
+        transform translate(-50%, 0)
+
+    @media(max-width 1024px) and (max-height 710px)
+        height calc(100% - 45px)
+        top 45px
+        transform translate(-50%, 0)
+
+    .popup
+        &__column
+            // @media(max-width 767px)
+            //     width 100%
+
+            &:first-child
+                padding 4px
+
+                @media(max-width 767px)
+                    display none
+
+        &__title
+            @media(max-width 767px)
+                margin 18px 0 30px 23px
+                position static
+
+    .btn
+        width 235px
+
+        &__wrap
+            margin-bottom 108px
+            justify-content center
+
+    .form-line--double
+        .btn
+            width 100%
+
+            &__wrap
+                margin 26px 0 0
+                width calc(50% - 8px)
+
+    .label__checkbox
+        line-height 18px
+
+        &:before
+        &:after
+            top 0
+
+    .tabs
+        &.tab-1
+            .tabs__header
+                &:before
+                    transform translateX(0)
+
+                &-item
+                    &:first-child
+                        color $green
+
+        &.tab-2
+            .tabs__header
+                &:before
+                    transform translateX(100%)
+
+                &-item
+                    &:last-child
+                        color $green
+
+            .popup__form-viewport
+                transform translateX(-50%)
+
+        &__header
+            margin 0 auto
+            width calc(100% - 80px)
+
+            @media(max-width 399px)
+                width calc(100% - 32px)
+
+            &:before
+                width 50%
+
+            &-item
+                width 50%
+
+    .charitem
+        height 456px
+
+        .nowstiker
+            top 29px
+            opacity 1
+
+        .btn
+            width 160px
+            opacity 1
+            transform translateY(0)
+
+            &__wrap
+                margin 0
+
+        &__place
+            opacity 1
+
+        &__info-text
+            opacity 1
+            transform translateY(0)
+
+        &__bottom
+            &-item
+                opacity 1
+                transform translateX(0)
+
+        &__bg
+            height 100%
+            opacity 1
+
+        &__front
+            height 100%
+
+        &__bottom
+            &-bg
+                &:before
+                    opacity 1

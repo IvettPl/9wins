@@ -52,3 +52,18 @@ var swiper = new Swiper(".cat-slider", {
         }
     }
 });
+
+
+/*
+    init popup bonuses slider
+*/
+var swiper = new Swiper(".popup-bonuses__list", {
+    direction: 'horizontal',
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    breakpoints: {
+        768: {
+            direction: 'vertical'
+        }
+    }
+});

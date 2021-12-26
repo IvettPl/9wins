@@ -1,0 +1,18 @@
+include var-bonuses-slider
+
+
+.popup-bonuses
+    .popup-bonuses__title Select your bonus
+    .swiper.popup-bonuses__list
+        .swiper-wrapper
+            each item in bonusesSliderList
+                div(class= item.classItem)
+                    .popup-bonuses__list-img
+                        picture
+                            source(srcset= item.webp, type="image/webp")
+                            img(src= item.imgPath, srcset= item.srcset, alt= item.imgAlt)
+                        .popup-bonuses__text
+                            .popup-bonuses__desc!= item.desc
+                            .popup-bonuses__list-title= item.listTitle
+                    if(item.text)
+                        p= item.text

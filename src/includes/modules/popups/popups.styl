@@ -1,0 +1,139 @@
+.popup
+    width 750px
+    position fixed
+    top 50%
+    left 50%
+    z-index 3
+    opacity 0
+    visibility hidden
+    overflow hidden
+    overflow-y auto
+    transform translate(-50%, -50%)
+    background-color $dark
+    border-radius 24px
+    transition opacity 300ms
+
+    @media(max-width 767px)
+        width 100%
+        max-width 425px
+
+    @media(max-width 425px)
+        border-radius 0
+
+    &.show
+        opacity 1
+        visibility visible
+
+    &__close
+        width 24px
+        height 24px
+        position absolute
+        top 9px
+        right 16px
+        cursor pointer
+        background url(../img/svg/btn-close.svg) no-repeat center
+        background-size cover
+        transition opacity 250ms
+
+        &:hover
+            opacity 0.7
+
+    &__columns
+        width 100%
+        display flex
+
+    &__form
+        padding 0 40px
+        width 50%
+        flex-shrink 0
+        box-sizing border-box
+
+        @media(max-width 399px)
+            padding 0 16px
+
+        &-viewport
+            margin-bottom 9px
+            width 200%
+            display flex
+            transform translateX(0)
+            transition transform 300ms
+
+    &__title
+        margin 18px 0 30px 23px
+        line-height 28px
+        font-size 22px
+        color $orange-light
+        letter-spacing 0.35px
+
+        @media(max-width 767px)
+            margin 18px 0 0 16px
+            position absolute
+            top 0
+            left 0
+
+    &__column
+        width 44%
+        display flex
+        flex-direction column
+        align-items center
+        justify-content center
+        box-sizing border-box
+
+        @media(max-width 767px)
+            width 100%
+            background-color $black
+
+        &:last-child
+            width 56%
+            background-color $black
+            border-radius 24px 0 0 24px
+
+            @media(max-width 767px)
+                width 100%
+                border-radius 0
+
+    &__footer
+        padding-top 10px
+        width 100%
+        line-height 18px
+        font-size 15px
+        color $white
+        text-align center
+        overflow hidden
+        border-radius 0 0 0 24px
+
+        @media(max-width 520px)
+            border-radius 0
+
+        &-wrap
+            padding 15px 0
+            background-color $gray
+
+        a
+            margin-left 6px
+            color $blue
+            position relative
+
+            &:before
+                content ''
+                width 100%
+                height 1px
+                position absolute
+                left 0
+                bottom 0
+                background-color $blue
+                transition width 250ms
+
+            &:hover
+                &:before
+                    width 0
+
+    .form-line
+        &__select
+            width 74px
+
+        &__phone
+            width calc(100% - 90px)
+
+    .btn
+        height 44px

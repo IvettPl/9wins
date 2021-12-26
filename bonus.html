@@ -223,7 +223,7 @@
         <main>
             <div class="bonus__title">My Bonuses</div>
             <!--slider Bonuses-->
-            <div class="slider-mod slider-mod--active js-animate">
+            <div class="slider-mod slider-mod--active js-animate js-bonuses">
                 <div class="center">
                     <div class="slider-mod__title">
                         <h3>Active</h3>
@@ -511,7 +511,7 @@
                 </div>
             </div>
             <!--Available-->
-            <div class="slider-mod slider-mod--active js-animate">
+            <div class="slider-mod slider-mod--active js-animate js-bonuses">
                 <div class="center">
                     <div class="slider-mod__title">
                         <h3>Available</h3>
@@ -658,6 +658,22 @@
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bonus-empty">
+                <div class="bonus-empty__item">
+                    <div class="bonus-empty__bg">
+                        <picture>
+                            <source srcset="./img/character-4.webp 1x, ./img/character-4@x2.webp 2x" type="image/webp" />
+                            <img src="./img/character-4.png" srcset="./img/character-4@x2.png 2x" alt="Empty bonuses" />
+                        </picture>
+                    </div>
+                    <div class="bonus-empty__info">
+                        <p>You have no bonuses</p>
+                        <div class="btn__wrap">
+                            <button class="btn btn--orange" type="submit">Tournaments</button>
                         </div>
                     </div>
                 </div>
@@ -812,147 +828,300 @@
             </div>
         </footer>
         <div class="overlay"></div>
-        <div class="login-popup" id="login">
-            <button class="header-nav__close"></button>
-            <div class="login-popup__column">
-                <div class="charitem">
-                    <div class="charitem__front">
-                        <div class="charitem__bg">
-                            <picture>
-                                <source srcset="./img/tornament-char-1.webp 1x, ./img/tornament-char-1@x2.webp 2x" type="image/webp" />
-                                <img src="./img/tornament-char-1.png" srcset="./img/tornament-char-1@x2.png 2x" alt="" />
-                            </picture>
-                        </div>
-                        <div class="charitem__info">
-                            <div class="nowstiker">Now</div>
-                            <div class="charitem__place"><span>324</span> place</div>
-                            <div class="charitem__bottom-bg">
-                                <div class="charitem__info-text">
-                                    <div class="charitem__info-title">Pragmatic play championship</div>
-                                    <div class="charitem__info-desc">210 players are already in</div>
-                                </div>
-                                <div class="charitem__bottom-total">
-                                    <div class="charitem__bottom-item">
-                                        <div class="charitem__bottom-title">12:59:59</div>
-                                        <div class="charitem__bottom-label">до конца</div>
-                                    </div>
-                                    <div class="charitem__bottom-item">
-                                        <div class="charitem__bottom-title">|₹ <span>2,48,74,583</span>
+        <div class="popup popup-reg" id="registration">
+            <button class="popup__close"></button>
+            <div class="popup__columns">
+                <div class="popup__column">
+                    <div class="popup-bonuses">
+                        <div class="popup-bonuses__title">Select your bonus</div>
+                        <div class="swiper popup-bonuses__list">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide popup-bonuses__list-item popup-bonuses__red">
+                                    <div class="popup-bonuses__list-img">
+                                        <picture>
+                                            <source srcset="./img/popup-banners/popup-bonus-1.webp 1x, ./img/popup-banners/popup-bonus-1@x2.webp 2x" type="image/webp" />
+                                            <img src="./img/popup-banners/popup-bonus-1.png" srcset="./img/popup-banners/popup-bonus-1@x2.png 2x" alt="Bonus banner" />
+                                        </picture>
+                                        <div class="popup-bonuses__text">
+                                            <div class="popup-bonuses__desc">New player <span>bonus</span>
+                                            </div>
+                                            <div class="popup-bonuses__list-title">100%</div>
                                         </div>
-                                        <div class="charitem__bottom-label">Rise Fund</div>
+                                    </div>
+                                    <p>Min deposit ₹ 700. Max Bonus ₹ 20,000. Wager x30.</p>
+                                </div>
+                                <div class="swiper-slide popup-bonuses__list-item popup-bonuses__yellow">
+                                    <div class="popup-bonuses__list-img">
+                                        <picture>
+                                            <source srcset="./img/popup-banners/popup-bonus-2.webp 1x, ./img/popup-banners/popup-bonus-2@x2.webp 2x" type="image/webp" />
+                                            <img src="./img/popup-banners/popup-bonus-2.png" srcset="./img/popup-banners/popup-bonus-2@x2.png 2x" alt="Bonus banner" />
+                                        </picture>
+                                        <div class="popup-bonuses__text">
+                                            <div class="popup-bonuses__desc">New player <span>bonus</span>
+                                            </div>
+                                            <div class="popup-bonuses__list-title">100%</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="btn__wrap">
-                                    <button class="btn btn--orange js-detail" type="button">More details</button>
+                                <div class="swiper-slide popup-bonuses__list-item popup-bonuses__green">
+                                    <div class="popup-bonuses__list-img">
+                                        <picture>
+                                            <source srcset="./img/popup-banners/popup-bonus-3.webp 1x, ./img/popup-banners/popup-bonus-3@x2.webp 2x" type="image/webp" />
+                                            <img src="./img/popup-banners/popup-bonus-3.png" srcset="./img/popup-banners/popup-bonus-3@x2.png 2x" alt="Bonus banner" />
+                                        </picture>
+                                        <div class="popup-bonuses__text">
+                                            <div class="popup-bonuses__desc">New player <span>bonus</span>
+                                            </div>
+                                            <div class="popup-bonuses__list-title">100%</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="charitem__back">
-                        <p>Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
-                        <div class="btn__wrap">
-                            <button class="btn btn--orange js-ok" type="button">Ok</button>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="login-popup__column">
-                <div class="login-popup__dialog">
-                    <form action="" method="POST" name="login">
-                        <div class="login-popup__title">Log in</div>
-                        <div class="header-nav__tabs">
-                            <div class="header-nav__tabs-head"><a class="header-nav__tabs-head-item active" href="##" data-tab="1">Use email</a><a class="header-nav__tabs-head-item" href="##" data-tab="2">Use phone number</a>
-                            </div>
-                            <div class="header-nav__tabs-content">
-                                <div class="header-nav__list active" data-tab-content="1">
-                                    <div class="login-form">
-                                        <div class="form-line">
-                                            <label for="mail">Email</label>
-                                            <div class="form-line__field-wrap">
-                                                <div class="form-line__field-icn hover">
-                                                    <img src="./img/svg/clear.svg" alt="Clear" />
-                                                </div>
-                                                <input class="field field__text" type="text" name="mail" placeholder="user@mail.com" />
+                <div class="popup__column">
+                    <div class="popup__dialog">
+                        <div class="popup__title">Registration</div>
+                        <form id="registration-form" action="" method="POST" name="registration">
+                            <div class="popup__form">
+                                <div class="form-line form-line--double">
+                                    <div class="form-line__box form-line__select">
+                                        <label for="mail">Code</label>
+                                        <select class="select-code" id="reg-phone-code">
+                                            <option label="+93" value="+93" selected=""></option>
+                                            <option label="+375" value="+375"></option>
+                                            <option label="+7" value="+7"></option>
+                                        </select>
+                                    </div>
+                                    <div class="form-line__box form-line__phone">
+                                        <label for="mail">Phone number</label>
+                                        <div class="form-line__icn-wrap">
+                                            <div class="form-line__icn hover">
+                                                <img src="./img/svg/clear.svg" alt="Clear" />
                                             </div>
-                                        </div>
-                                        <div class="form-line">
-                                            <label for="password">Password</label>
-                                            <div class="form-line__field-wrap">
-                                                <div class="form-line__field-icn hover">
-                                                    <img src="./img/svg/show-pass.svg" alt="Show password" />
-                                                </div>
-                                                <input class="field field__text" type="password" name="password" placeholder="pick a password" />
-                                            </div>
-                                        </div>
-                                        <div class="form-line">
-                                            <input class="field field__checkbox" type="checkbox" id="fogot" name="fogot" />
-                                            <label class="label label__checkbox" for="fogot">Fogot your password?<a href="##">Get recovery link.</a>
-                                            </label>
+                                            <input class="field field__text" type="text" id="login-phone" name="phone" placeholder="000 000 000" data-mask="phone" />
                                         </div>
                                     </div>
                                 </div>
-                                <div class="header-nav__list active" data-tab-content="2">
-                                    <div class="login-form">
-                                        <div class="form-line form-line--double">
-                                            <div class="form-line__box">
-                                                <label for="mail">Code</label>
-                                                <div class="select"></div>
-                                            </div>
-                                            <div class="form-line__box">
-                                                <label for="mail">Phone number</label>
-                                                <div class="form-line__field-wrap">
-                                                    <div class="form-line__field-icn hover">
-                                                        <img src="./img/svg/clear.svg" alt="Clear" />
-                                                    </div>
-                                                    <input class="field field__text" type="text" id="login-phone" name="phone" placeholder="phone" data-mask="phone" />
-                                                </div>
-                                            </div>
+                                <div class="form-line form-line--double">
+                                    <div class="form-line__box">
+                                        <label for="mail">Code</label>
+                                        <input class="field field__text" type="password" name="code" data-mask="verification" />
+                                    </div>
+                                    <div class="btn__wrap">
+                                        <button class="btn" type="button" disabled="">Get code</button>
+                                    </div>
+                                </div>
+                                <div class="form-line">
+                                    <label for="mail">Email</label>
+                                    <div class="form-line__icn-wrap">
+                                        <div class="form-line__icn form-line__icn--clear">
+                                            <img src="./img/svg/clear.svg" alt="Clear" />
                                         </div>
-                                        <div class="form-line form-line--double">
-                                            <div class="form-line__box">
-                                                <label for="mail">Code</label>
-                                                <input class="field field__text" type="password" name="code" data-mask="verification" />
-                                            </div>
-                                            <div class="btn__wrap">
-                                                <button class="btn" type="button" disabled="">Get code</button>
-                                            </div>
+                                        <input class="field field__text" type="text" name="mail" placeholder="user@mail.com" />
+                                    </div>
+                                </div>
+                                <div class="form-line">
+                                    <label for="password">Password</label>
+                                    <div class="form-line__icn-wrap">
+                                        <div class="form-line__icn form-line__icn--pass">
+                                            <img src="./img/svg/show-pass.svg" alt="Show password" />
                                         </div>
+                                        <input class="field field__text" type="password" name="password" placeholder="pick a password" />
+                                    </div>
+                                </div>
+                                <div class="form-line form-line--double form-line--check">
+                                    <div class="form-line__box">
+                                        <input class="field field__checkbox" type="checkbox" id="privacy-reg" name="privacy-reg" />
+                                        <label class="label label__checkbox" for="privacy-reg">I have read and agree to the Privacy Policy and Terms and conditions. I confirm that I am of leagal age.</label>
+                                    </div>
+                                    <div class="btn__wrap">
+                                        <button class="btn" type="submit" disabled="">Registration</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="btn__wrap">
-                            <button class="btn" type="submit" disabled="">Log in</button>
-                        </div>
-                        <div class="login__social">
-                            <div class="login__social-title">or login via social network</div>
-                            <div class="login__social-icns">
-                                <div class="login__social-icn">
-                                    <a href="##">
+                        </form>
+                    </div>
+                    <div class="popup__footer">
+                        <div class="popup__social">
+                            <div class="popup__social-title">or login via social network</div>
+                            <div class="popup__social-icns">
+                                <div class="popup__social-icn">
+                                    <a class="popup__social-link" href="##">
                                         <img src="./img/svg/icn-fb.svg" alt="Facebook" />
                                     </a>
                                 </div>
-                                <div class="login__social-icn">
-                                    <a href="##">
+                                <div class="popup__social-icn">
+                                    <a class="popup__social-link" href="##">
                                         <img src="./img/svg/icn-google.svg" alt="Google" />
                                     </a>
                                 </div>
-                                <div class="login__social-icn">
-                                    <a href="##">
+                                <div class="popup__social-icn">
+                                    <a class="popup__social-link" href="##">
                                         <img src="./img/svg/icn-aa.svg" alt="Aadhaar" />
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </form>
+                        <div class="popup__footer-wrap">
+                            <p>Already have an account?<a href="##">Login</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
-                <div class="login-popup__footer">
-                    <p>Don’t have an account?<a href="##">Sign Up</a>
-                    </p>
+            </div>
+        </div>
+        <div class="popup popup-log" id="log">
+            <button class="popup__close"></button>
+            <div class="popup__columns">
+                <div class="popup__column">
+                    <div class="charitem">
+                        <div class="charitem__front">
+                            <div class="charitem__bg">
+                                <picture>
+                                    <source srcset="./img/tornament-char-1.webp 1x, ./img/tornament-char-1@x2.webp 2x" type="image/webp" />
+                                    <img src="./img/tornament-char-1.png" srcset="./img/tornament-char-1@x2.png 2x" alt="" />
+                                </picture>
+                            </div>
+                            <div class="charitem__info">
+                                <div class="nowstiker">Now</div>
+                                <div class="charitem__place"><span>324</span> place</div>
+                                <div class="charitem__bottom-bg">
+                                    <div class="charitem__info-text">
+                                        <div class="charitem__info-title">Pragmatic play championship</div>
+                                        <div class="charitem__info-desc">210 players are already in</div>
+                                    </div>
+                                    <div class="charitem__bottom-total">
+                                        <div class="charitem__bottom-item">
+                                            <div class="charitem__bottom-title">12:59:59</div>
+                                            <div class="charitem__bottom-label">до конца</div>
+                                        </div>
+                                        <div class="charitem__bottom-item">
+                                            <div class="charitem__bottom-title">|₹ <span>2,48,74,583</span>
+                                            </div>
+                                            <div class="charitem__bottom-label">Rise Fund</div>
+                                        </div>
+                                    </div>
+                                    <div class="btn__wrap">
+                                        <button class="btn btn--orange js-detail" type="button">More details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="charitem__back">
+                            <p>Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке существенных финансовых и административных условий.</p>
+                            <div class="btn__wrap">
+                                <button class="btn btn--orange js-ok" type="button">Ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__column">
+                    <div class="popup__dialog">
+                        <div class="popup__title">Log In</div>
+                        <form id="login-form" action="" method="POST" name="login">
+                            <div class="tabs tabs--login tab-1">
+                                <div class="tabs__header">
+                                    <div class="tabs__header-item" data-tab="tab-1">Use email</div>
+                                    <div class="tabs__header-item" data-tab="tab-2">Use phone number</div>
+                                </div>
+                                <div class="tabs__content">
+                                    <div class="popup__form-viewport">
+                                        <div class="popup__form">
+                                            <div class="form-line">
+                                                <label for="mail">Email</label>
+                                                <div class="form-line__icn-wrap">
+                                                    <div class="form-line__icn form-line__icn--clear">
+                                                        <img src="./img/svg/clear.svg" alt="Clear" />
+                                                    </div>
+                                                    <input class="field field__text" type="text" name="mail" placeholder="user@mail.com" />
+                                                </div>
+                                            </div>
+                                            <div class="form-line">
+                                                <label for="password">Password</label>
+                                                <div class="form-line__icn-wrap">
+                                                    <div class="form-line__icn form-line__icn--pass">
+                                                        <img src="./img/svg/show-pass.svg" alt="Show password" />
+                                                    </div>
+                                                    <input class="field field__text" type="password" name="password" placeholder="pick a password" />
+                                                </div>
+                                            </div>
+                                            <div class="form-line form-line--check">
+                                                <input class="field field__checkbox" type="checkbox" id="fogot-pass" name="fogot-pass" />
+                                                <label class="label label__checkbox" for="fogot-pass">Fogot your password?<a href="##">Get recovery link.</a>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="popup__form">
+                                            <div class="form-line form-line--double">
+                                                <div class="form-line__box form-line__select">
+                                                    <label for="mail">Code</label>
+                                                    <select class="select-code" id="reg-phone-code">
+                                                        <option label="+93" value="+93" selected=""></option>
+                                                        <option label="+375" value="+375"></option>
+                                                        <option label="+7" value="+7"></option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-line__box form-line__phone">
+                                                    <label for="mail">Phone number</label>
+                                                    <div class="form-line__icn-wrap">
+                                                        <div class="form-line__icn hover">
+                                                            <img src="./img/svg/clear.svg" alt="Clear" />
+                                                        </div>
+                                                        <input class="field field__text" type="text" id="login-phone" name="phone" placeholder="000 000 000" data-mask="phone" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-line form-line--double">
+                                                <div class="form-line__box">
+                                                    <label for="mail">Code</label>
+                                                    <input class="field field__text" type="password" name="code" data-mask="verification" />
+                                                </div>
+                                                <div class="btn__wrap">
+                                                    <button class="btn" type="button" disabled="">Get code</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn__wrap">
+                                <button class="btn" type="submit" disabled="">Log in</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="popup__footer">
+                        <div class="popup__social">
+                            <div class="popup__social-title">or login via social network</div>
+                            <div class="popup__social-icns">
+                                <div class="popup__social-icn">
+                                    <a class="popup__social-link" href="##">
+                                        <img src="./img/svg/icn-fb.svg" alt="Facebook" />
+                                    </a>
+                                </div>
+                                <div class="popup__social-icn">
+                                    <a class="popup__social-link" href="##">
+                                        <img src="./img/svg/icn-google.svg" alt="Google" />
+                                    </a>
+                                </div>
+                                <div class="popup__social-icn">
+                                    <a class="popup__social-link" href="##">
+                                        <img src="./img/svg/icn-aa.svg" alt="Aadhaar" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__footer-wrap">
+                            <p>Don’t have an account?<a href="##">Sign Up</a>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <script src="js/choices.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <script src="./js/swiper-bundle.min.js"></script>
     <script src="./js/main.min.js"></script>

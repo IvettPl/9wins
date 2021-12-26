@@ -14,3 +14,6 @@ require('./part/init-tabs-screen-states.js');
 
 require('./part/init-masks.js');
 require('./part/select.js');
+
+require('./part/init-empty-bonus.js');
+require('./part/init-history-show.js');

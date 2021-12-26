@@ -1,0 +1,7 @@
+.popup__social
+    .popup__social-title= socialNetwork.title
+    .popup__social-icns
+        each item in socialNetwork.icns
+            .popup__social-icn
+                a.popup__social-link(href= item.link)
+                    img(src= item.icnUrl, alt= item.icnAlt)

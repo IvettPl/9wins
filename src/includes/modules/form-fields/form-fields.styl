@@ -1,0 +1,62 @@
+.form-line
+    margin-bottom 16px
+    width 100%
+    position relative
+
+    .label__checkbox
+        margin 0
+        padding 0 0 0 26px
+        line-height 18px
+
+    &--double
+        display flex
+        justify-content space-between
+
+    &--check
+        .label__checkbox
+            line-height 13px
+            font-size 11px
+            color $gray-light
+
+            &:before
+            &:after
+                top 3px
+
+    &__box
+        width calc(50% - 8px)
+
+    label
+        margin-bottom 4px
+        display block
+        line-height 20px
+        font-size 15px
+        color $gray-lighter
+
+    &__note
+        margin-top 8px
+        display block
+        font-size 13px
+        color $gray-superlight
+        letter-spacing -0.08px
+
+    &__icn
+        width 24px
+        height 24px
+        position absolute
+        top 50%
+        right 10px
+        transform translateY(-50%)
+
+        &--clear
+            cursor pointer
+            transition opacity 250ms
+
+            &:hover
+                opacity 0.6
+
+        &-wrap
+            width 100%
+            position relative
+
+            input
+                padding-right 44px

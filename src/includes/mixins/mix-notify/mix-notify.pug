@@ -1,0 +1,5 @@
+mixin notify(content)
+    div(class= content.class)
+        .notify__icn
+            img(src= content.img, alt= content.imgAlt)
+        .notify__text!= content.text

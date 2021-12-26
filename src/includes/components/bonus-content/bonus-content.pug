@@ -4,7 +4,7 @@ include var-bonus-content
 .bonus__title My Bonuses
 
 //slider Bonuses
-.slider-mod.slider-mod--active.js-animate
+.slider-mod.slider-mod--active.js-animate.js-bonuses
     .center
         .slider-mod__title
             h3 Active
@@ -16,7 +16,7 @@ include var-bonus-content
 
 //Available
 
-.slider-mod.slider-mod--active.js-animate
+.slider-mod.slider-mod--active.js-animate.js-bonuses
     .center
         .slider-mod__title
             h3 Available
@@ -24,6 +24,4 @@ include var-bonus-content
             .swiper-wrapper
                 +charItem(charItemAvailableSlider)
 
-//- .slider-mod--nobonuses
-//-     .center
-//-         +bonusList(noBonusItemActive)
+include ./../../modules/bonus-empty/bonus-empty

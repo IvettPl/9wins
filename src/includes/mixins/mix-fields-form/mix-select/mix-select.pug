@@ -1,0 +1,17 @@
+mixin select(attr)
+    select(
+        id= attr.id ? attr.id : false,
+        class= attr.className ? attr.className : '',
+        name= attr.fieldName ? attr.fieldName : false,
+        required= attr.required ? '' : false,
+        disabled= attr.disabled ? '' : false,
+        size= attr.size ? attr.size : false,
+        multiple= attr.multiple ? '' : false
+    )
+        each option in attr.options
+            option(
+                label= option.label ? option.label : false,
+                value= option.value ? option.value : false,
+                selected= option.selected ? '' : false,
+                disabled= option.disabled ? '' : false
+            )

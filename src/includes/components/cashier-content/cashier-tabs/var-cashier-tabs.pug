@@ -177,12 +177,19 @@
         },
         items: [
             {
-                logoUrl:'./img/logos/mastercard.svg',
+                logoUrl: './img/logos/mastercard.svg',
                 logoAlt: 'Mastercard',
                 state: 'in process',
                 price: '₹ <span>50,00</span>',
                 data: '08.10.2021',
-                statedata: '10.10.2021'
+                statedata: '10.10.2021',
+                detalis: [
+                    { title: 'Sum:', label: '50.00' },
+                    { title: 'Request date:', label: '08.10.2021' },
+                    { title: 'Withdrawal date:', label: '08.10.2021' },
+                    { title: 'Payment method:', label: 'MasterCard' },
+                    { title: 'Status:', label: 'in progress' }
+                ]
             },
             {
                 logoUrl:'./img/logos/mastercard.svg',
@@ -191,7 +198,14 @@
                 state: 'done',
                 price: '₹ <span>50,00</span>',
                 data: '08.10.2021',
-                statedata: '10.10.2021'
+                statedata: '10.10.2021',
+                detalis: [
+                    { title: 'Sum:', label: '50.00' },
+                    { title: 'Request date:', label: '08.10.2021' },
+                    { title: 'Withdrawal date:', label: '08.10.2021' },
+                    { title: 'Payment method:', label: 'MasterCard' },
+                    { title: 'Status:', label: 'in progress' }
+                ]
             },
             {
                 logoUrl:'./img/logos/mastercard.svg',
@@ -200,7 +214,32 @@
                 state: 'censeled',
                 price: '₹ <span>50,00</span>',
                 data: '08.10.2021',
-                statedata: '10.10.2021'
+                statedata: '10.10.2021',
+                detalis: [
+                    { title: 'Sum:', label: '50.00' },
+                    { title: 'Request date:', label: '08.10.2021' },
+                    { title: 'Withdrawal date:', label: '08.10.2021' },
+                    { title: 'Payment method:', label: 'MasterCard' },
+                    { title: 'Status:', label: 'in progress' }
+                ]
             }
         ]
+    }
+
+
+-
+    let notifyWarning = {
+        class: 'notify show',
+        img: './img/svg/icn-info.svg',
+        imgAlt: 'Warning',
+        text: 'Please note that this payment method accepts only DEBIT card payments'
+    }
+
+
+-
+    let notifyReceived = {
+        class: 'notify show',
+        img: './img/svg/icn-request.svg',
+        imgAlt: 'received',
+        text: 'Withdrawal request received'
     }

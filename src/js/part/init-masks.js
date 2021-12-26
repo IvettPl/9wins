@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Phone number
     mask('phone', {
-        mask: '(000) 000-00-00'
+        mask: '000 000 000'
     });
 
     // Маска для почтового индекса

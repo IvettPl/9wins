@@ -1,0 +1,42 @@
+//- include ./../var-popups
+include var-reg-popup.pug
+
+
+#registration.popup.popup-reg
+    button.popup__close
+    .popup__columns
+        .popup__column
+            include ./../bonuses-slider/bonuses-slider
+        .popup__column
+            .popup__dialog
+                .popup__title Registration
+                form(id="registration-form" action="" method="POST" name="registration")
+                    .popup__form
+                        include ./../../form-fields/phones-fields-group
+                        include ./../../form-fields/verify-group
+
+                        .form-line
+                            label(for="mail") Email
+                            .form-line__icn-wrap
+                                .form-line__icn.form-line__icn--clear
+                                    img(src="./img/svg/clear.svg", alt="Clear")
+                                +inputText(fieldMailInput)
+
+                        .form-line
+                            label(for="password") Password
+                            .form-line__icn-wrap
+                                .form-line__icn.form-line__icn--pass
+                                    img(src="./img/svg/show-pass.svg", alt="Show password")
+                                +inputText(fieldPassInput)
+
+                        .form-line.form-line--double.form-line--check
+                            .form-line__box
+                                +checkbox(fieldRegCheck)
+                                label.label.label__checkbox(for="privacy-reg") I have read and agree to the Privacy Policy and Terms and conditions. I confirm that I am of leagal age.
+                            .btn__wrap
+                                +button(registrationBtn)
+            .popup__footer
+                include ./../social-network/social-network
+                .popup__footer-wrap
+                    p Already have an account?
+                        a(href="##") Login

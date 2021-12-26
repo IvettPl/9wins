@@ -2,15 +2,28 @@ mixin historylist(list)
     div(class='historylist' + (list.subClass ? ' ' + list.subClass : ''))
         each item in list.items
             .historylist__item
-                .historylist__item-paylogo
-                    img(src= item.logoUrl, alt= item.logoAlt)
-                .historylist__item-payment
-                    .historylist__item-price!= item.price
-                    .historylist__item-data= item.data
-                .historylist__item-status
-                    div(class="historylist__item-state" + (item.subClass ? ' ' + item.subClass : ''))= item.state
-                    if(item.statedata)
-                        .historylist__item-statedata= item.statedata
+                .historylist__item-header
+                    .historylist__item-paylogo
+                        img(src= item.logoUrl, alt= item.logoAlt)
+                    .historylist__item-payment
+                        .historylist__item-price!= item.price
+                        .historylist__item-data= item.data
+                    .historylist__item-status
+                        div(class="historylist__item-state" + (item.subClass ? ' ' + item.subClass : ''))= item.state
+                        if(item.statedata)
+                            .historylist__item-statedata= item.statedata
+                if(item.detalis)
+                    .historylist__detalis
+                        .historylist__detalis-wrap
+                            button.historylist__detalis-close
+                            .historylist__detalis-title Details
+                            .historylist__detalis-logo
+                                img(src= item.logoUrl, alt= item.logoAlt)
+                            .historylist__detalis-info
+                                each detail in item.detalis
+                                    .historylist__detalis-item
+                                        .historylist__detalis-subtitle= detail.title
+                                        .historylist__detalis-label= detail.title
         if(list.showmore)
             .btn__wrap
                 +button(list.showmore)

@@ -3,17 +3,28 @@
 
     &__item
         margin-top 4px
-        padding 20px 16px
         width 100%
-        height 80px
-        display flex
+        // height 80px
         position relative
-        background-color $gray
-        border-radius 16px
         box-sizing border-box
+        cursor pointer
 
         &:first-child
             margin-top 0
+
+        &.show
+            .historylist__detalis
+                height 362px
+
+        &-header
+            padding 20px 16px
+            width 100%
+            display flex
+            flex-wrap wrap
+            background-color $gray
+            border-radius 16px
+            box-sizing border-box
+
 
         &-paylogo
             margin-right 16px
@@ -50,8 +61,65 @@
             color $gray-light
 
         &-payment
-            width 100%
+            width calc(100% - 191px)
 
         &-price
             color $white
             letter-spacing -0.41px
+
+    &__detalis
+        width 100%
+        height 0
+        position relative
+        overflow hidden
+        border-radius 0 0 16px 16px
+        transition height 250ms
+
+        &-wrap
+            margin-top 4px
+            padding 18px 25px
+            background-color $gray-superlight
+            border-radius 16px 16px 0 0
+            box-sizing border-box
+
+        &-close
+            width 24px
+            height 24px
+            position absolute
+            top 9px
+            right 16px
+            cursor pointer
+            background url(../img/svg/btn-close.svg) no-repeat center
+            background-size cover
+            transition opacity 250ms
+
+            &:hover
+                opacity 0.5
+
+        &-title
+            line-height 28px
+            font-size 22px
+            color $black
+            text-align center
+            letter-spacing 0.35px
+
+        &-logo
+            margin 27px auto
+            width 95px
+
+            img
+                width 100%
+
+        &-info
+            width 100%
+
+        &-item
+            margin-bottom 12px
+            width 100%
+            display flex
+            color $gray
+            letter-spacing -0.41px
+
+        &-subtitle
+            margin-right 4px
+            font-weight 700

@@ -3,9 +3,6 @@
 */
 document.querySelectorAll('.tabs').forEach(el => {
 
-    let parentNav = el.querySelector('.tabs__header');
-    let parentContent = el.querySelector('.tabs__content');
-
     el.addEventListener('click', event => {
 
         let target = event.target;

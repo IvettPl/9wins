@@ -1,0 +1,43 @@
+.popup-reg
+
+    @media(min-width 1025px) and (max-height 710px)
+        height calc(100% - 53px)
+        top 53px
+        transform translate(-50%, 0)
+
+    @media(max-width 1024px) and (max-height 710px)
+        height calc(100% - 45px)
+        top 45px
+        transform translate(-50%, 0)
+
+    @media(max-width 767px) and (max-height 871px)
+        height calc(100% - 45px)
+        top 45px
+        transform translate(-50%, 0)
+
+    .btn__wrap
+        width calc(50% - 8px)
+
+    .form-line
+        &--double
+            .btn__wrap
+                margin-top 24px
+
+        &--check
+            .btn__wrap
+                margin-top 0
+
+    .form-line--check
+        margin 24px 0 30px
+
+    .popup
+        &__columns
+            @media(max-width 767px)
+                flex-direction column
+
+        // &__column
+        //     @media(max-width 767px)
+        //         width 100%
+
+        &__form
+            width 100%

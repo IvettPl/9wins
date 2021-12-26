@@ -1,0 +1,13 @@
+include var-bonus-empty
+
+
+.bonus-empty
+    .bonus-empty__item
+        .bonus-empty__bg
+            picture
+                source(srcset='./img/character-4.webp 1x, ./img/character-4@x2.webp 2x', type="image/webp")
+                img(src='./img/character-4.png', srcset='./img/character-4@x2.png 2x', alt='Empty bonuses')
+        .bonus-empty__info
+            p!= 'You have no bonuses'
+            .btn__wrap
+                +button(btnEmptyBonus)

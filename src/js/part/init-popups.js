@@ -1,51 +1,53 @@
+import {addClassElement, removeClassElement} from './helper-functions';
+import {close, overlay, loginPopup, regPopup, menuPanel} from './helper-vars';
+
+
 const btnShowLoginPopup = document.querySelectorAll('.js-btn--login');
-const loginPopup = document.querySelector('#login');
-const overlay = document.querySelector('.overlay');
-const menuPanel = document.querySelector('.header-nav');
+const btnShowRegPopup = document.querySelectorAll('.js-btn--reg');
 
-const close = document.querySelectorAll('.header-nav__close');
-
-const socIcnItems = document.querySelectorAll('.login__social-icn');
+const socIcnItems = document.querySelectorAll('.popup__social-link');
 const wrapper = document.querySelector('.wrapper');
 
 
-
-function closed() {
-    overlay.classList.remove('show');
-    loginPopup.classList.remove('show');
-}
-
-
-// open login popup
 btnShowLoginPopup.forEach(el => {
-    el.addEventListener('click', function() {
-        loginPopup.classList.add('show');
+    el.addEventListener('click', () => {
+        addClassElement(loginPopup, 'show');
+        addClassElement(overlay, 'show');
+        removeClassElement(menuPanel, 'show');
+    });
+});
 
-        if(!overlay.classList.contains('show')) {
-            overlay.classList.add('show');
-        }
-
-        if(menuPanel.classList.contains('show')) {
-            menuPanel.classList.remove('show');
-        }
+btnShowRegPopup.forEach(el => {
+    el.addEventListener('click', () => {
+        addClassElement(regPopup, 'show');
+        addClassElement(overlay, 'show');
+        removeClassElement(menuPanel, 'show');
     });
 });
 
 
-// close popup and overlay cliick close btn
 close.forEach(el => {
-    el.addEventListener('click', closed);
+    el.addEventListener('click', function() {
+        removeClassElement(overlay, 'show');
+        removeClassElement(loginPopup, 'show');
+        removeClassElement(regPopup, 'show');
+    });
 });
 
-// close popup and overlay cliick overlay
-overlay.addEventListener('click', closed);
-
+overlay.addEventListener('click', function(){
+    removeClassElement(this, 'show');
+    removeClassElement(loginPopup, 'show');
+    removeClassElement(regPopup, 'show');
+});
 
 
 //demo registration
 socIcnItems.forEach(el => {
     el.addEventListener('click', function(){
-        closed();
-        wrapper.classList.add('wrapper--reg');
+        removeClassElement(overlay, 'show');
+        removeClassElement(loginPopup, 'show');
+        removeClassElement(regPopup, 'show');
+        // wrapper.classList.add('wrapper--reg');
+        addClassElement(wrapper, 'wrapper--reg');
     });
 });

@@ -1,14 +1,19 @@
 include var-cashier-tabs
 
 +tabs(cashierTabs)
+    +notify(notifyWarning)
+    +notify(notifyReceived)
     .tabs__content-viewport
-        div.tabs__content-item
+        .tabs__content-item
+            .tabs__content-title Deposit
             include ./../carts-list/carts-list-deposit
             include ./../cashier-forms/deposit-form
-        div.tabs__content-item
+        .tabs__content-item
+            .tabs__content-title Withdrawal
             include ./../empty-box/empty-box
             include ./../carts-list/carts-list
             include ./../cashier-forms/request-form
-        div.tabs__content-item
+        .tabs__content-item
+            .tabs__content-title Hirtory
             include ./../empty-box/empty-box-history
             include ./../history-list/history-list

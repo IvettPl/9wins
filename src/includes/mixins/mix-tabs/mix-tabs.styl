@@ -12,7 +12,7 @@
 
         &:before
             content ''
-            width calc((100% -2px) / 3)
+            width calc(100% / 3 - 1px)
             height calc(100% - 2px)
             position absolute
             top 1px
@@ -25,7 +25,7 @@
         &-item
             margin 1px
             padding 12px 0
-            width calc((100% -1px) / 3)
+            width calc(100% / 3 - 1px)
             line-height 18px
             font-size 13px
             color $white
@@ -46,3 +46,10 @@
         padding-top 32px
         width 100%
         overflow hidden
+
+        &-title
+            margin-bottom 30px
+            line-height 28px
+            font-size 22px
+            color $orange-light
+            letter-spacing 0.35px

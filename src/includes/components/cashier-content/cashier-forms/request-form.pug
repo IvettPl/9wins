@@ -3,8 +3,8 @@
     form(id="request" action="" method="POST" name="request")
         .form-line
             label(for="request-amount") Withdrawal amount
-            .form-line__field-wrap
-                .form-line__field-icn.hover
+            .form-line__icn-wrap
+                .form-line__icn.form-line__icn--clear
                     img(src="./img/svg/clear.svg", alt="Clear")
                 +inputText(requestAmount)
         .form-line
