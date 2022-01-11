@@ -30,6 +30,28 @@
         @media(max-width 1024px)
             margin 0
 
+        &:hover
+            circle
+            path
+            g
+                fill $white
+                opacity 1
+                transition fill 250ms, opacity 250ms
+
+            .games
+                path
+                    &:first-child
+                        fill none
+                        stroke $white
+                        transition stroke 250ms, opacity 250ms
+
+            .slot
+                circle
+                path
+                    fill none
+                    stroke $white
+                    transition stroke 250ms, opacity 250ms
+
         &--deposite
             @media(min-width 1025px)
                 display none

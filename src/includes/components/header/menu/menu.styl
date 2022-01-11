@@ -1,12 +1,12 @@
 .header-nav
     max-width 375px
-    padding 56px 16px 110px
+    padding 56px 16px 152px
     width 100%
     height 100%
     position fixed
     top 0
     left 0
-    z-index 3
+    z-index 4
     background-color $black
     box-sizing border-box
     transform translateX(-100%)
@@ -16,8 +16,11 @@
         transform translateX(0)
 
     .login__box-default
-        @media(min-width 1025px)
-            display none
+        .btn
+            width 126px
+            height 48px
+    //     @media(min-width 1025px)
+    //         display none
 
     &__close
         width 24px
@@ -55,7 +58,7 @@
             display flex
             position absolute
             left 16px
-            bottom 48px
+            bottom 22px
             opacity 0
             visibility hidden
             background-color $dark
@@ -91,37 +94,70 @@
                 letter-spacing -.08px
                 position relative
 
-    &__list
+    .list
+        margin-top 0
         width 100%
         flex-shrink 0
 
         &:last-child
             display none
 
-    &__list
+        &[data-tab-content="1"]
+            .list__item
+                &:hover
+                    circle
+                    path
+                    g
+                        fill $white
+                        opacity 1
+                        transition fill 250ms, opacity 250ms
+
+                    .slot
+                        path
+                            &:last-child
+                                fill none
+                                stroke $white
+                                transition stroke 250ms, opacity 250ms
+
+        &[data-tab-content="2"]
+            .list__item
+                &:hover
+                    circle
+                    path
+                        fill $white
+                        opacity 1
+                        transition fill 250ms, opacity 250ms
+
+                    .games
+                        path
+                            &:first-child
+                                fill none
+                                stroke $white
+                                transition stroke 250ms, opacity 250ms
+
+                    .tennis-big
+                    .basketball
+                    .tennis-small
+                    .volleyball
+                    .hockey
+                    .ufc
+                    .boxing
+                        path
+                            fill none
+                            stroke $white
+                            transition stroke 250ms, opacity 250ms
+
+        &__item
+            margin-bottom 12px
+
+            &:last-child
+                margin-bottom 0
+
+    &__footer
         width 100%
-
-    &__item
-        margin-top 12px
-        width 100%
-
-        &:first-child
-            margin-top 0
-
-    &__link
-        padding 13px 23px 13px 0
-        display flex
-        line-height 22px
-        font-size 17px
-        color $white
-        align-items center
-
-    &__icn
-        margin-right 8px
-        width 24px
-        height 24px
-        display block
-        flex-shrink 0
+        position absolute
+        left 0
+        bottom 20px
 
 .overlay
     width 100%
@@ -129,7 +165,7 @@
     position fixed
     top 0
     left 0
-    z-index 2
+    z-index 3
     opacity 0
     visibility hidden
     background-color rgba($dark, .8)
@@ -144,11 +180,11 @@
 
 .wrapper--reg
     .header-nav
-        .header-nav
-            &__list
-                &:last-child
-                    display block
+        .list
+            &:last-child
+                display block
 
+        .header-nav
             &__tabs
                 &-head
                     opacity 1

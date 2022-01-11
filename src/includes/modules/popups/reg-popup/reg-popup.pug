@@ -15,19 +15,21 @@ include var-reg-popup.pug
                         include ./../../form-fields/phones-fields-group
                         include ./../../form-fields/verify-group
 
-                        .form-line
+                        .form-line.is-error
                             label(for="mail") Email
                             .form-line__icn-wrap
+                                +inputText(fieldMailInput)
                                 .form-line__icn.form-line__icn--clear
                                     img(src="./img/svg/clear.svg", alt="Clear")
-                                +inputText(fieldMailInput)
+                            span.is-error__label Invalid input format
 
                         .form-line
                             label(for="password") Password
                             .form-line__icn-wrap
+                                +inputText(fieldPassInput)
                                 .form-line__icn.form-line__icn--pass
                                     img(src="./img/svg/show-pass.svg", alt="Show password")
-                                +inputText(fieldPassInput)
+                            span.is-error__label Too short password
 
                         .form-line.form-line--double.form-line--check
                             .form-line__box

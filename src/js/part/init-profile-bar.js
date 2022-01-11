@@ -3,6 +3,8 @@ let profilePanel = document.querySelector('#profile-panel');
 const overlay = document.querySelector('.overlay');
 const screenBoxes = document.querySelectorAll('.screen');
 const close = document.querySelector('.profile__close');
+const logout = document.querySelector('.profile__logout');
+const wrapper = document.querySelector('.wrapper');
 
 
 function opened() {
@@ -21,6 +23,11 @@ function closed() {
 avatarHeader.addEventListener('click', opened);
 overlay.addEventListener('click', closed);
 close.addEventListener('click', closed);
+
+logout.addEventListener('click', function() {
+    closed();
+    wrapper.classList.remove('wrapper--reg');
+});
 
 
 document.querySelectorAll('.profile-list').forEach(el => {

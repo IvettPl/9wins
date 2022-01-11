@@ -6,7 +6,7 @@
     position fixed
     top 0
     right 0
-    z-index 3
+    z-index 4
     transform translateX(100%)
     background-color $black
     box-sizing border-box
@@ -31,12 +31,30 @@
     &__area
         padding-bottom 20px
         width 100%
-        height calc(100% - 182px)
+        height calc(100% - 222px)
         position relative
         overflow hidden
         box-sizing border-box
 
+    &__logout
+        margin 10px auto
+        width 95px
+        line-height 21px
+        font-size 18px
+        color $blue
+        cursor pointer
+        transition opacity 250ms
 
+        &:hover
+            opacity 0.6
+
+    .list__item
+        &:hover
+            path
+            g
+                fill $white
+                opacity 1
+                transition fill 250ms, opacity 250ms
 
 
 .screen

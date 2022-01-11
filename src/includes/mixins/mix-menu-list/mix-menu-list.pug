@@ -1,5 +1,8 @@
 mixin menuList(list)
-    ul(class="list" + (list.subClass ? ' ' + list.subClass : ''))
+    ul(
+        class="list" + (list.subClass ? ' ' + list.subClass : '')
+        data-tab-content= list.data ? list.data : false
+    )
         each item in list.items
             li(class="list__item" data-screen= item.attr ? item.attr : false)
                 if(item.link)

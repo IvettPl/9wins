@@ -17,20 +17,20 @@ include var-log-popup
                                 .form-line
                                     label(for="mail") Email
                                     .form-line__icn-wrap
+                                        +inputText(fieldMailInput)
                                         .form-line__icn.form-line__icn--clear
                                             img(src="./img/svg/clear.svg", alt="Clear")
-                                        +inputText(fieldMailInput)
 
                                 .form-line
                                     label(for="password") Password
                                     .form-line__icn-wrap
+                                        +inputText(fieldPassInput)
                                         .form-line__icn.form-line__icn--pass
                                             img(src="./img/svg/show-pass.svg", alt="Show password")
-                                        +inputText(fieldPassInput)
 
                                 .form-line.form-line--check
-                                    +checkbox(fieldLogCheck)
-                                    label.label.label__checkbox(for="fogot-pass") Fogot your password?
+                                    //- +checkbox(fieldLogCheck)
+                                    span.fogot__pass Fogot your password?
                                         a(href="##") Get recovery link.
 
                             .popup__form

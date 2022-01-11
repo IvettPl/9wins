@@ -2,7 +2,7 @@
 
 document.querySelectorAll('.header-nav__tabs').forEach((e) => {
     let tabNavs = e.querySelectorAll(".header-nav__tabs-head-item");
-    let tabPanes = e.querySelectorAll(".header-nav__list");
+    let tabPanes = e.querySelectorAll(".header-nav .list");
     let tabNavsParent = e.querySelector('.header-nav__tabs-head');
     let tabNPanesParent = e.querySelector('.header-nav__tabs-content');
 

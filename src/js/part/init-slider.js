@@ -6,6 +6,10 @@ var swiper = new Swiper(".banner-slider", {
     effect: "creative",
     loop: true,
     speed: 1000,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
     creativeEffect: {
         prev: {
             shadow: true,

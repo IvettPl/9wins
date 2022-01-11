@@ -6,6 +6,6 @@
     .form-line__box.form-line__phone
         label(for="mail") Phone number
         .form-line__icn-wrap
-            .form-line__icn.hover
-                img(src="./img/svg/clear.svg", alt="Clear")
             +inputText(fieldPhoneInput)
+            .form-line__icn.form-line__icn--clear
+                img(src="./img/svg/clear.svg", alt="Clear")

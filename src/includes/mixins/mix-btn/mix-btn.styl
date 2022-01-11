@@ -22,8 +22,9 @@
         background-color $red-lighter
 
     &:disabled
-        cursor default
+        // cursor default
         background-color $red-superlight
+        pointer-events none
 
     &--orange
         background-color $orange
@@ -31,6 +32,9 @@
         &:hover
         &:focus
             background-color $orange-lighter
+
+        &:disabled
+            background-color $orange-superlight
 
     &--grey
         background-color $gray

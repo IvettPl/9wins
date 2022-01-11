@@ -5,12 +5,18 @@
     align-items center
     justify-content center
 
+    @media(max-width 768px)
+        justify-content space-evenly
+
+    &--paycart
+        @media(max-width 420px)
+            justify-content space-between
+
     &__wrap
-        margin-bottom 35px
         width 100%
 
-    .center
-        padding-right 0
+        .center
+            padding-right 0
 
     &__title
         margin-bottom 20px
@@ -23,7 +29,120 @@
             display block
 
     &__item
-        margin-right 18px
-        height 38px
+        margin 0 20px 40px 0
         display flex
         align-items center
+
+        @media(max-width 768px)
+            margin 0 14px 40px 0
+
+        &--googlepay
+            @media(max-width 610px)
+                width 64px
+
+            @media(max-width 420px)
+                margin-right 40px
+
+        &--upi
+            @media(max-width 768px)
+                order 2
+
+            @media(max-width 610px)
+                width 60px
+
+            @media(max-width 420px)
+                margin-right 40px
+
+        &--rupay
+            @media(max-width 768px)
+                order 3
+
+            @media(max-width 610px)
+                width 88px
+
+        &--visa
+            @media(max-width 768px)
+                order 4
+
+            @media(max-width 610px)
+                width 88px
+
+        &--mastercard
+            @media(max-width 768px)
+                order 5
+
+            @media(max-width 610px)
+                width 41px
+
+        &--yesbank
+            @media(max-width 768px)
+                order 6
+
+            @media(max-width 610px)
+                width 71px
+
+        &--pnb
+            @media(max-width 768px)
+                order 7
+
+            @media(max-width 610px)
+                width 71px
+
+        &--hdfcbank
+            @media(max-width 768px)
+                order 8
+
+            @media(max-width 610px)
+                width 29px
+
+        &--statebank
+            @media(max-width 768px)
+                order 9
+
+            @media(max-width 610px)
+                width 32px
+
+        &--icicibank
+            @media(max-width 768px)
+                order 10
+
+            @media(max-width 610px)
+                width 28px
+
+        &--axisbank
+            @media(max-width 768px)
+                order 11
+
+            @media(max-width 610px)
+                width 28px
+
+        &--kotac
+            @media(max-width 768px)
+                order 12
+
+            @media(max-width 610px)
+                width 32px
+
+        &--bankbaroda
+            @media(max-width 768px)
+                order 13
+
+            @media(max-width 610px)
+                width 32px
+
+        &--phonepe
+            @media(max-width 768px)
+                order 14
+
+            @media(max-width 610px)
+                width 36px
+
+            img
+                @media(max-width 610px)
+                    display none
+
+                &:last-child
+                    display none
+
+                    @media(max-width 610px)
+                        display block

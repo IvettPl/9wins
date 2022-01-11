@@ -1,6 +1,12 @@
-.form-line.form-line--double
-    .form-line__box
-        label(for="mail") Code
-        +inputText(verifyCodeInput)
-    .btn__wrap
-        +button(verifyGetCodeBtn)
+.form-line.is-verified
+    .form-line--double
+        .form-line__box
+            label(for="mail") Code
+            .form-line__icn-wrap
+                .form-line__icn.form-line__icn--exclude
+                    img(src="./img/svg/icn-exclude.svg", alt="Clear")
+                +inputText(verifyCodeInput)
+        .btn__wrap
+            +button(verifyGetCodeBtn)
+            .is-verified__label Verified
+    span.is-error__label Code error. Code may consist of numbers only

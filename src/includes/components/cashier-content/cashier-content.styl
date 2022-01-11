@@ -1,12 +1,17 @@
 .cashier
     padding 16px 0 60px
     width 100%
+    height auto
+    visibility visible
+    overflow visible
 
     &--tabscreen
         background-color $black
 
     .js-hide
-        display none
+        height 0
+        visibility hidden
+        overflow hidden
 
     .btn
         width 160px
@@ -17,10 +22,8 @@
 
     .historylist
         .btn
+            margin-top 40px
             width 118px
-
-            &__wrap
-                margin-top 40px
 
     // .tabs__content
     //     height 100%

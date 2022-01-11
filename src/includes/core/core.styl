@@ -71,8 +71,8 @@ input
 
 input:-webkit-autofill
     -webkit-box-shadow inset 0 0 0 50px $dark !important
-    -webkit-text-fill-color $gray-lighter !important
-    color $gray-lighter !important
+    -webkit-text-fill-color $white !important
+    color $white !important
 
 
 .wrapper
@@ -108,3 +108,38 @@ input:-webkit-autofill
 
 .hidden
     display none
+
+.is-error
+    &__label
+        margin-top 4px
+        display none
+        line-height 18px
+        font-size 13px
+        color $red
+        letter-spacing -0.078px
+
+    .is-error__label
+        display block
+
+    label
+        color $red !important
+
+    .field
+        box-shadow 0 0 0 1px $red
+
+.is-verified
+
+    &__label
+        width 100%
+        display none
+        color $green
+        letter-spacing -0.408px
+
+    .form-line__icn--exclude
+        display flex
+
+    .btn
+        display none
+
+    .is-verified__label
+        display block

@@ -13,14 +13,20 @@
             margin-top 0
 
         &.show
+            // background-color $gray-superlight
+            // border-radius 16px
+
             .historylist__detalis
                 height 362px
+                opacity 1
 
         &-header
             padding 20px 16px
             width 100%
             display flex
             flex-wrap wrap
+            position relative
+            z-index 1
             background-color $gray
             border-radius 16px
             box-sizing border-box
@@ -68,25 +74,28 @@
             letter-spacing -0.41px
 
     &__detalis
+        margin-top -20px
+        padding-top 20px
         width 100%
         height 0
+        opacity 0
         position relative
         overflow hidden
+        background-color $gray-superlight
         border-radius 0 0 16px 16px
-        transition height 250ms
+        transition height 250ms, opacity 250ms
 
         &-wrap
             margin-top 4px
             padding 18px 25px
-            background-color $gray-superlight
-            border-radius 16px 16px 0 0
+            border-radius 0
             box-sizing border-box
 
         &-close
             width 24px
             height 24px
             position absolute
-            top 9px
+            top 29px
             right 16px
             cursor pointer
             background url(../img/svg/btn-close.svg) no-repeat center

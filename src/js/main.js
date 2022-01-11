@@ -17,3 +17,4 @@ require('./part/select.js');
 
 require('./part/init-empty-bonus.js');
 require('./part/init-history-show.js');
+require('./part/init-history-loadmore.js');

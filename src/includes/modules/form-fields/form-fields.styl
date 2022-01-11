@@ -12,15 +12,28 @@
         display flex
         justify-content space-between
 
+        .is-verified__label
+            line-height 48px
+
     &--check
         .label__checkbox
+        .fogot__pass
             line-height 13px
             font-size 11px
             color $gray-light
 
+        .label__checkbox
             &:before
             &:after
                 top 3px
+
+        .fogot__pass
+            display block
+
+            a
+                margin-left 4px
+                color $blue
+                position relative
 
     &__box
         width calc(50% - 8px)
@@ -42,17 +55,24 @@
     &__icn
         width 24px
         height 24px
+        display none
+        align-items center
+        justify-content center
         position absolute
         top 50%
         right 10px
         transform translateY(-50%)
 
         &--clear
+        &--pass
             cursor pointer
             transition opacity 250ms
 
             &:hover
                 opacity 0.6
+
+        &--exclude
+            display none
 
         &-wrap
             width 100%

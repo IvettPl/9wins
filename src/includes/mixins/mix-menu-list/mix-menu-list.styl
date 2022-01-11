@@ -5,20 +5,19 @@
 
     &__item
         margin-bottom 16px
-        padding 13px 0
         width 100%
         display flex
         align-items center
         cursor pointer
 
-        &-link
-            display flex
+        &:last-child
+            margin-bottom 0
 
-        &:hover
-            path
-            g
-                fill $white
-                transition fill 250ms
+        &-link
+            width 100%
+            padding 13px 0
+            display flex
+            box-sizing border-box
 
         &-icn
             margin-right 8px

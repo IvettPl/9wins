@@ -4,5 +4,11 @@ mixin logolist(list)
             .logolist__title!= list.title
             div(class= list.class)
                 each item in list.items
-                    .logolist__item
-                        img(src= item.img, alt= item.alt)
+                    if(item.itemClass)
+                        div(class= item.itemClass)
+                            img(src= item.img, alt= item.alt)
+                            if(item.imgDop)
+                                img(src= item.imgDop, alt= item.alt)
+                    else
+                        .logolist__item
+                            img(src= item.img, alt= item.alt)
